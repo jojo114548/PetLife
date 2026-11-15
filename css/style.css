@@ -1,0 +1,4137 @@
+/* ============================================================
+   PETLIFE — FOLHA DE ESTILOS PRINCIPAL
+   Organizada e revisada. Regras repetidas com valores diferentes
+   foram mantidas quando funcionam como sobrescritas da cascata.
+   ============================================================ */
+
+/*
+
+ * PETLIFE — FOLHA DE ESTILOS PRINCIPAL
+
+ */
+
+:root {
+
+  --coral: #ff604f;
+
+  --coral-escuro: #e94f43;
+
+  --pessego: #f9e8df;
+
+  --laranja: #ffad55;
+
+  --texto: #453a36;
+
+  --texto-suave: #806f68;
+
+  --branco: #ffffff;
+
+  --fundo: #f5e7dd;
+
+  --largura-conteudo: 1120px;
+
+  --sombra-suave: 0 8px 22px rgb(91 60 48 / 10%);
+
+  --raio-cartao: 18px;
+
+}
+
+/* 2. Configurações gerais e normalização visual. */
+
+* {
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+html {
+
+  scroll-behavior: smooth;
+
+  scroll-padding-top: 90px;
+
+}
+
+body {
+
+  min-width: 320px;
+
+  background: var(--fundo);
+
+  color: var(--texto);
+
+  font-family: "Nunito", sans-serif;
+
+  line-height: 1.6;
+
+}
+
+img {
+
+  display: block;
+
+  max-width: 100%;
+
+}
+
+a {
+
+  color: inherit;
+
+  text-decoration: none;
+
+}
+
+button,
+
+a {
+
+  -webkit-tap-highlight-color: transparent;
+
+}
+
+a:focus-visible,
+
+button:focus-visible {
+
+  outline: 3px solid #244b9e;
+
+  outline-offset: 3px;
+
+}
+
+.secao-container {
+
+  width: min(var(--largura-conteudo), 88%);
+
+  margin-inline: auto;
+
+}
+
+.identificador-secao {
+
+  color: var(--coral);
+
+  font-size: 0.7rem;
+
+  font-weight: 900;
+
+  letter-spacing: 1.4px;
+
+  text-transform: uppercase;
+
+}
+
+.botao {
+
+  display: inline-flex;
+
+  min-height: 44px;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 11px 20px;
+
+  border: 2px solid transparent;
+
+  border-radius: 9px;
+
+  font-size: 0.85rem;
+
+  font-weight: 900;
+
+  line-height: 1.2;
+
+  text-align: center;
+
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+
+}
+
+.botao:hover {
+
+  transform: translateY(-2px);
+
+}
+
+.botao-principal {
+
+  background: var(--coral);
+
+  color: var(--branco);
+
+  box-shadow: 0 7px 18px rgb(233 79 67 / 19%);
+
+}
+
+.botao-principal:hover {
+
+color: var(--coral);
+
+  background: var(--branco);
+
+  box-shadow: 0 7px 18px rgb(233 79 67 / 19%);
+
+}
+
+
+
+.botao-contorno {
+
+  border-color: rgb(255 255 255 / 75%);
+
+  color: var(--branco);
+
+}
+
+.botao-contorno:hover {
+
+  background: var(--branco);
+
+  color: var(--coral-escuro);
+
+}
+
+.botao-claro {
+
+  background: var(--branco);
+
+  color: var(--coral-escuro);
+
+}
+
+.botao-claro:hover {
+
+  background: #fff0d7;
+
+}
+
+/* 3. Cabeçalho: marca à esquerda e navegação à direita. */
+
+.cabecalho {
+
+  position: sticky;
+
+  z-index: 20;
+
+  top: 0;
+
+  display: flex;
+
+  min-height: 82px;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 24px;
+
+  padding-inline: max(3vw, 9px);
+
+  background: var(--coral);
+
+  color: var(--branco);
+
+  box-shadow: 0 3px 14px rgb(107 48 35 / 10%);
+
+}
+
+.marca {
+
+  display: inline-flex;
+
+  flex-shrink: 0;
+
+  align-items: center;
+
+  gap: 8px;
+
+}
+
+.marca-imagem {
+
+  display: grid;
+
+  width: 62px;
+
+  height: 62px;
+
+  place-items: center;
+
+  overflow: hidden;
+
+}
+
+.marca-imagem img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+}
+
+.marca-nome {
+
+  font-size: 1.55rem;
+
+  font-weight: 900;
+
+  white-space: nowrap;
+
+}
+
+.marca-nome span {
+
+  color: #ffe0b9;
+
+}
+
+.navegacao {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: clamp(12px, 3vw, 28px);
+
+  font-size: 0.82rem;
+
+  font-weight: 800;
+
+  margin:auto;
+
+  padding-left: 9rem;
+
+}
+
+.navegacao > a {
+
+  transition: color 180ms ease;
+
+}
+
+.navegacao > a:hover {
+
+  color: #ffe0b9;
+
+    padding: 6px 17px;
+
+}
+
+.botao-grupo-navegacao{
+
+    display: flex;
+
+    gap: 12px;
+
+    justify-content: right;
+
+    align-self: flex-end;
+
+}
+
+.botao-navegacao {
+
+background: #ffffff;
+
+color: #e94f43;
+
+  padding: 9px 10px;
+
+  border-radius: 9px;
+
+  white-space: nowrap;
+
+}
+
+.botao-navegacao-destaque {
+
+  padding: 9px 10px;
+
+  border-radius: 9px;
+
+  white-space: nowrap;
+
+    color: #ffffff;
+
+    border: 2px solid #ffffff;
+
+}
+
+.botao-navegacao-destaque:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 6px 15px rgba(69, 58, 54, 0.18);
+
+    color: #ff604f;
+
+    background: #ffffff;
+
+}
+
+.botao-menu {
+
+  display: none;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--branco);
+
+  cursor: pointer;
+
+  font-size: 1.8rem;
+
+  line-height: 1;
+
+}
+
+/* Destaque inicial: imagem de fundo com camada escura para legibilidade. */
+
+/* =====================================================
+   DESTAQUE INICIAL — IMAGEM E EFEITOS VISUAIS
+===================================================== */
+
+.destaque-inicial {
+    display: flex;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    min-height: 470px;
+    align-items: center;
+    padding: 64px max(9vw, 28px);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgb(36 28 23 / 82%) 0%,
+            rgb(36 28 23 / 35%) 55%,
+            rgb(36 28 23 / 5%) 100%
+        ),
+        url("https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&w=2000&q=90")
+        center 48% / cover;
+
+    color: var(--branco);
+}
+
+/* Textura granulada */
+.destaque-inicial::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.12;
+
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='ruido'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23ruido)' opacity='.5'/%3E%3C/svg%3E");
+
+    mix-blend-mode: soft-light;
+}
+
+/* Iluminação quente */
+.destaque-inicial::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 75% 45%,
+            rgb(255 190 120 / 12%),
+            transparent 45%
+        ),
+        linear-gradient(
+            to bottom,
+            transparent 65%,
+            var(--cor-fundo) 100%
+        );
+}
+
+/* Conteúdo acima dos efeitos */
+.destaque-conteudo {
+    position: relative;
+    z-index: 3;
+}
+
+.destaque-conteudo {
+
+  max-width: 590px;
+
+}
+
+.texto-superior {
+
+  color: #ffe0b9;
+
+  font-size: 0.72rem;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+}
+
+.destaque-conteudo h1 {
+
+  margin-block: 14px;
+
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
+
+  line-height: 1.02;
+
+}
+
+.destaque-conteudo h1 strong {
+
+  color: #ffb66e;
+
+}
+
+.destaque-conteudo > p {
+
+  max-width: 450px;
+
+  margin-bottom: 25px;
+
+  color: #fff9f4;
+
+  font-size: 1.05rem;
+
+}
+
+.destaque-acoes {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+}
+
+/* 4. Introdução à adoção. */
+
+.introducao {
+
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.9fr;
+
+  align-items: center;
+
+  gap: 55px;
+
+  padding-block: 85px;
+
+}
+
+.introducao-imagem {
+
+  position: relative;
+
+  height: 500px;
+
+  overflow: hidden;
+
+  border-radius: var(--raio-cartao);
+
+  box-shadow: 16px 16px 0 #f4d5c6;
+
+}
+
+.introducao-imagem > img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+}
+
+.legenda-imagem {
+
+  position: absolute;
+
+  bottom: 18px;
+
+  left: 18px;
+
+  padding: 8px 15px;
+
+  border-radius: 5px;
+
+  background: var(--coral);
+
+  color: var(--branco);
+
+  font-size: 0.7rem;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+
+}
+
+.introducao-texto h2,
+
+.cabecalho-secao h2,
+
+.resgate-cabecalho h2 {
+
+  margin-block: 9px 15px;
+
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+
+  font-weight: 900;
+
+  line-height: 1.13;
+
+}
+
+.introducao-texto h2 span,
+
+.resgate-cabecalho h2 span {
+
+  color: var(--coral);
+
+}
+
+.introducao-texto p {
+
+  max-width: 470px;
+
+  margin-bottom: 23px;
+
+  color: var(--texto-suave);
+
+}
+
+/* Cabeçalhos compartilhados por seções. */
+
+.cabecalho-secao {
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 30px;
+
+}
+
+.cabecalho-secao h2 {
+
+  margin-bottom: 0;
+
+}
+
+.link-destaque {
+
+  padding: 6px 12px;
+
+  border-radius: 6px;
+
+  color: var(--coral);
+
+  font-size: 0.75rem;
+
+  font-weight: 900;
+
+}
+
+/* Vitrine de animais: cards com proporções e informações consistentes. */
+
+.secao-adocao {
+
+  padding-block: 58px 76px;
+
+}
+
+.grupo-animais + .grupo-animais {
+
+  margin-top: 35px;
+
+}
+
+.cabecalho-grupo {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 17px;
+
+}
+
+.cabecalho-grupo h3 {
+
+  padding: 5px 11px;
+
+  border-radius: 5px;
+
+  font-size: 0.95rem;
+
+  font-weight: 900;
+
+}
+
+.cabecalho-grupo > a {
+
+  padding: 6px 13px;
+
+  border-radius: 18px;
+
+  color: var(--coral);
+
+  font-size: 0.72rem;
+
+  font-weight: 900;
+
+}
+
+.grade-animais {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+
+}
+
+.cartao-animal {
+
+  min-width: 0;
+
+  padding: 12px;
+
+  border-radius: 22px;
+
+  box-shadow: var(--sombra-suave);
+
+  transition: transform 200ms ease, box-shadow 200ms ease;
+
+}
+
+.cartao-animal:hover {
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 13px 25px rgb(91 60 48 / 14%);
+
+}
+
+.cartao-gato {
+
+  background: #f9c39f42;
+
+}
+
+.cartao-cachorro {
+
+  background: #f9c39f42;
+
+}
+
+.animal-imagem {
+
+  height: 220px;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  background: #eadbd3;
+
+}
+
+.animal-imagem img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 350ms ease;
+
+}
+
+.cartao-animal:hover .animal-imagem img {
+
+  transform: scale(1.04);
+
+}
+
+.animal-informacoes {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  padding: 12px 3px 2px;
+
+}
+
+.animal-informacoes h4 {
+
+  font-size: 0.95rem;
+
+}
+
+.animal-informacoes p {
+
+  color: #76645e;
+
+  font-size: 0.72rem;
+
+}
+
+.animal-informacoes > a {
+
+  flex-shrink: 0;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  background: var(--branco);
+
+  color: var(--coral-escuro);
+
+  font-size: 0.75rem;
+
+  font-weight: 900;
+
+}
+
+.animal-informacoes > a:hover {
+
+  background:var(--coral);
+
+  color: #ffffff;
+
+}
+/* Histórias: vídeo e texto lado a lado no desktop. */
+
+.secao-historias {
+
+  padding-block: 70px 85px;
+
+}
+
+.historias-cabecalho {
+
+  max-width: 680px;
+
+  margin: 0 auto 32px;
+
+  text-align: center;
+
+}
+
+.historias-cabecalho h2 {
+
+  margin-block: 8px 10px;
+
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+
+  line-height: 1.12;
+
+}
+
+.historias-cabecalho p {
+
+  color: var(--texto-suave);
+
+  font-size: 0.9rem;
+
+}
+
+.historias-conteudo {
+
+  display: grid;
+
+  grid-template-columns: 1.2fr 0.8fr;
+
+  align-items: center;
+
+  gap: 36px;
+
+  padding: 20px;
+
+  border-radius: 22px;
+
+  background: var(--branco);
+
+  box-shadow: 0 12px 32px rgb(91 60 48 / 6%);
+
+}
+
+.historias-video {
+
+  overflow: hidden;
+
+  aspect-ratio: 16 / 9;
+
+  border-radius: 15px;
+
+  background: #241c17;
+
+}
+
+.historias-video iframe {
+
+  width: 100%;
+
+  height: 100%;
+
+  border: 0;
+
+}
+
+.historias-texto {
+
+  padding: 18px 15px;
+
+}
+
+.etiqueta-historia {
+
+  display: inline-block;
+
+  padding: 6px 11px;
+
+  border-radius: 20px;
+
+  color: var(--coral);
+
+  font-size: 0.65rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.5px;
+
+  text-transform: uppercase;
+
+}
+
+.historias-texto h3 {
+
+  margin-block: 15px 12px;
+
+  font-size: clamp(1.45rem, 2.6vw, 2rem);
+
+  line-height: 1.13;
+
+}
+
+.historias-texto p {
+
+  margin-bottom: 20px;
+
+  color: var(--texto-suave);
+
+  font-size: 0.85rem;
+
+}
+
+/* Campanha de resgate animal. */
+
+.secao-resgate {
+
+  padding: 85px 6%;
+
+  background: #fff7f1;
+
+}
+
+.resgate-container {
+
+  max-width: 1200px;
+
+  margin-inline: auto;
+
+}
+
+.resgate-cabecalho {
+
+  max-width: 720px;
+
+  margin-bottom: 35px;
+
+}
+
+.resgate-cabecalho h2 {
+
+  color: var(--texto);
+
+}
+
+.resgate-cabecalho p {
+
+  color: var(--texto-suave);
+
+  font-size: 0.9rem;
+
+}
+
+.resgate-banner {
+
+  display: flex;
+
+  min-height: 350px;
+
+  align-items: center;
+
+  padding: 45px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background:
+
+    linear-gradient(90deg, rgb(35 27 24 / 88%), rgb(35 27 24 / 35%)),
+
+    url("/imgs/jonatan-bustos-P1Ku27zZJDs-unsplash.jpg") center 45% / cover no-repeat;
+
+}
+
+.resgate-conteudo {
+
+  max-width: 560px;
+
+  color: var(--branco);
+
+}
+
+.resgate-conteudo > span {
+
+  color: #ffc08e;
+
+  font-size: 0.68rem;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+}
+
+.resgate-conteudo h3 {
+
+  margin-block: 14px;
+
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+
+  line-height: 1.2;
+
+}
+
+.resgate-conteudo p {
+
+  margin-bottom: 23px;
+
+  color: #f4eae4;
+
+  font-size: 0.85rem;
+
+  line-height: 1.7;
+
+}
+
+.resgate-acoes {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+}
+
+/* Mapa de organizações e abrigos. */
+
+.secao-locais {
+
+  padding-block: 75px;
+
+  background: #fff5ef;
+
+}
+
+.texto-locais {
+
+  margin-top: 9px;
+
+  color: var(--texto-suave);
+
+  font-size: 0.85rem;
+
+}
+
+.mapa-locais {
+
+  min-height: 420px;
+
+  overflow: hidden;
+
+  border-radius: var(--raio-cartao);
+
+  background: #f1e5dd;
+
+  box-shadow: var(--sombra-suave);
+
+}
+
+.mapa-locais iframe {
+
+  display: block;
+
+  width: 100%;
+
+  min-height: 420px;
+
+  border: 0;
+
+}
+
+/* Notícias e orientações: grade de cards com imagens padronizadas. */
+
+.secao-noticias {
+
+  padding-block: 55px 85px;
+
+}
+
+.grade-noticias {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 23px;
+
+}
+
+.cartao-noticia {
+
+  overflow: hidden;
+
+  border-radius: var(--raio-cartao);
+
+  background: var(--branco);
+
+  box-shadow: var(--sombra-suave);
+
+}
+
+.cartao-noticia > img {
+
+  width: 100%;
+
+  height: 190px;
+
+  padding: 9px;
+
+  border-radius: 20px;
+
+  object-fit: cover;
+
+}
+
+.cartao-noticia > div {
+
+  padding: 18px;
+
+}
+
+.cartao-noticia h3 {
+
+  margin-bottom: 8px;
+
+  font-size: 1rem;
+
+  line-height: 1.2;
+
+}
+
+.cartao-noticia p {
+
+  margin-bottom: 13px;
+
+  color: var(--texto-suave);
+
+  font-size: 0.8rem;
+
+}
+
+.cartao-noticia a {
+
+  color: var(--coral-escuro);
+
+  font-size: 0.75rem;
+
+  font-weight: 900;
+
+}
+
+/* 5. Rodapé: quatro colunas que se reorganizam em telas menores. */
+
+.rodape {
+
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+
+  gap: 25px;
+
+  padding: 45px max(6vw, 25px) 22px;
+
+  background: var(--coral);
+
+  color: var(--branco);
+
+}
+
+.rodape-marca {
+
+  max-width: 280px;
+
+}
+
+.marca-rodape .marca-imagem {
+
+  width: 55px;
+
+  height: 55px;
+
+}
+
+.rodape-marca > p {
+
+  margin-top: 12px;
+
+  color: #fff1e9;
+
+  font-size: 0.78rem;
+
+}
+
+.redes-sociais {
+
+  display: flex;
+
+  gap: 9px;
+
+  margin-top: 18px;
+
+}
+
+.redes-sociais a,
+
+.redes-sociais img {
+
+  width: 24px;
+
+  height: 24px;
+
+}
+
+.redes-sociais img {
+
+  object-fit: contain;
+
+}
+
+.rodape-coluna h2 {
+
+  margin-bottom: 13px;
+
+  font-size: 1rem;
+
+}
+
+.rodape-coluna a {
+
+  display: block;
+
+  margin-block: 7px;
+
+  color: #fff0e9;
+
+  font-size: 0.82rem;
+
+}
+
+.rodape a:hover {
+
+  text-decoration: underline;
+
+}
+
+.direitos-autorais {
+
+  grid-column: 1 / -1;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgb(255 255 255 / 27%);
+
+  color: #fff0e9;
+
+  font-size: 0.75rem;
+
+  text-align: center;
+
+}
+
+/* 6. Responsividade para tablets e telas intermediárias. */
+
+@media (max-width: 900px) {
+
+  html {
+
+    scroll-padding-top: 75px;
+
+  }
+
+  .cabecalho {
+
+    min-height: 76px;
+
+    padding-inline: 24px;
+
+  }
+
+  .botao-menu {
+
+    display: block;
+
+  }
+
+  .navegacao {
+
+    position: absolute;
+
+    top: 100%;
+
+    right: 0;
+
+    left: 0;
+
+    display: none;
+
+    align-items: stretch;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    padding: 22px 24px;
+
+    background: var(--coral-escuro);
+
+    box-shadow: 0 12px 18px rgb(0 0 0 / 12%);
+
+  }
+
+  .navegacao.menu-aberto {
+
+    display: flex;
+
+  }
+
+  .navegacao .botao-navegacao {
+
+    text-align: center;
+
+  }
+
+  .introducao {
+
+    gap: 32px;
+
+  }
+
+  .animal-imagem {
+
+    height: 185px;
+
+  }
+
+  .historias-conteudo {
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+  }
+
+  .historias-texto {
+
+    padding: 10px 5px 5px;
+
+  }
+
+  .rodape {
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  }
+
+}
+
+/* Celulares e telas estreitas: conteúdo em coluna e controles confortáveis. */
+
+@media (max-width: 620px) {
+
+  .cabecalho {
+
+    min-height: 70px;
+
+  }
+
+  .marca-nome {
+
+    font-size: 1.35rem;
+
+  }
+
+  .marca-imagem {
+
+    width: 52px;
+
+    height: 52px;
+
+  }
+
+  .destaque-inicial {
+
+    min-height: 430px;
+
+    padding: 55px 7%;
+
+    background-position: 60% center;
+
+  }
+
+  .destaque-conteudo > p {
+
+    font-size: 0.95rem;
+
+  }
+
+  .destaque-acoes {
+
+    align-items: stretch;
+
+    flex-direction: column;
+
+  }
+
+  .destaque-acoes .botao {
+
+    width: 100%;
+
+  }
+
+  .secao-container {
+
+    width: 88%;
+
+  }
+
+  .introducao {
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    padding-block: 55px;
+
+  }
+
+  .introducao-imagem {
+
+    height: 250px;
+
+  }
+
+  .cabecalho-secao {
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+  }
+
+  .secao-adocao {
+
+    padding-block: 45px 60px;
+
+  }
+
+  .grade-animais {
+
+    grid-template-columns: 1fr;
+
+    gap: 17px;
+
+  }
+
+  .cartao-animal {
+
+    display: grid;
+
+    grid-template-columns: minmax(110px, 42%) minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 10px;
+
+  }
+
+  .animal-imagem {
+
+    height: 145px;
+
+  }
+
+  .animal-informacoes {
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    padding: 8px 3px;
+
+  }
+
+  .animal-informacoes > a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 40px;
+
+  }
+
+  .secao-historias {
+
+    padding-block: 45px 55px;
+
+  }
+
+  .historias-conteudo {
+
+    padding: 12px;
+
+  }
+
+  .historias-texto h3 {
+
+    font-size: 1.5rem;
+
+  }
+
+  .secao-resgate {
+
+    padding: 55px 6%;
+
+  }
+
+  .resgate-banner {
+
+    min-height: 390px;
+
+    padding: 25px;
+
+    background-position: 60% center;
+
+  }
+
+  .resgate-acoes {
+
+    align-items: stretch;
+
+    flex-direction: column;
+
+  }
+
+  .resgate-acoes .botao {
+
+    width: 100%;
+
+  }
+
+  .secao-locais {
+
+    padding-block: 50px;
+
+  }
+
+  .mapa-locais,
+
+  .mapa-locais iframe {
+
+    min-height: 320px;
+
+  }
+
+  .secao-noticias {
+
+    padding-block: 45px 60px;
+
+  }
+
+  .grade-noticias {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .cartao-noticia {
+
+    display: grid;
+
+    grid-template-columns: minmax(115px, 38%) minmax(0, 1fr);
+
+    align-items: stretch;
+
+  }
+
+  .cartao-noticia > img {
+
+    height: 100%;
+
+    min-height: 155px;
+
+    padding: 8px;
+
+  }
+
+  .cartao-noticia > div {
+
+    padding: 14px;
+
+  }
+
+  .rodape {
+
+    gap: 25px 15px;
+
+    padding-top: 35px;
+
+  }
+
+  .rodape-marca {
+
+    grid-column: 1 / -1;
+
+  }
+
+}
+
+/* Celulares muito estreitos: evita apertos e quebras desconfortáveis. */
+
+@media (max-width: 380px) {
+
+  .secao-container {
+
+    width: 90%;
+
+  }
+
+  .destaque-conteudo h1 {
+
+    font-size: 2.35rem;
+
+  }
+
+  .cartao-animal {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .animal-imagem {
+
+    height: 210px;
+
+  }
+
+  .cartao-noticia {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .cartao-noticia > img {
+
+    height: 175px;
+
+  }
+
+  .rodape {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .rodape-marca,
+
+  .direitos-autorais {
+
+    grid-column: auto;
+
+  }
+
+}
+
+/* 8. Página Conteúdo: perguntas frequentes com acordeão acessível. */
+
+/* SEÇÃO DE PERGUNTAS FREQUENTES */
+
+.secao-faq {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    max-width: 1200px;
+
+    margin: 80px auto;
+
+    padding: 20px 30px;
+
+    background-color: #ffffff;
+
+    border-radius: 15px;
+
+}
+
+/* LADO DAS PERGUNTAS */
+
+.faq-conteudo {
+
+    flex: 1;
+
+}
+
+.faq-conteudo h2 {
+
+    font-size: 32px;
+
+    color: #333;
+
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* PERGUNTAS */
+
+.lista-perguntas {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+.item-pergunta {
+
+    background-color: #f6c6a860;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+}
+.item-pergunta:hover{
+  background-color: #f6c6a8
+}
+
+.item-pergunta summary {
+
+    padding: 16px 20px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #333;
+
+    list-style: none;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.item-pergunta summary::-webkit-details-marker {
+
+    display: none;
+
+}
+
+/* SINAL DE + E - */
+
+.item-pergunta summary::after {
+
+    content: "+";
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+    color: #333;
+
+}
+
+.item-pergunta[open] summary::after {
+
+    content: "−";
+
+}
+
+.item-pergunta p {
+
+    padding: 0 20px 18px;
+
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+/* IMAGEM AO LADO */
+
+.faq-imagem {
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.faq-imagem img {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .secao-faq {
+
+        flex-direction: column;
+
+        padding: 30px 20px;
+
+        gap: 30px;
+
+        margin: 40px 15px;
+
+    }
+
+    .faq-conteudo {
+
+        width: 100%;
+
+    }
+
+    .faq-conteudo h2 {
+
+        font-size: 26px;
+
+        text-align: center;
+
+    }
+
+    .faq-imagem {
+
+        width: 100%;
+
+    }
+
+    .faq-imagem img {
+
+        max-width: 100%;
+
+        height: 300px;
+
+    }
+
+}
+
+/* 9. Página Conteúdo: artigo, listas e cartões de orientação. */
+
+.secao-artigo { padding-block: 65px; }
+
+.bloco-conteudo { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 42px; }
+
+.texto-artigo h2 { margin: 5px 0 14px; font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.15; }
+
+.texto-artigo p { color: var(--texto-suave); }
+
+.texto-artigo h3 { margin-top: 22px; }
+
+.lista-cuidados { padding-left: 22px; color: var(--texto-suave); }
+
+.lista-cuidados li { margin-block: 8px; }
+
+.imagem-artigo { width: 100%; min-height: 310px; max-height: 390px; border-radius: var(--raio); object-fit: cover; }
+
+.secao-cuidados, .secao-video, .secao-mapa { padding-block: 45px 70px; }
+
+.grade-cuidados { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+
+.cartao-cuidado { padding: 25px; border: 1px solid var(--borda); border-radius: var(--raio); background: white; box-shadow: var(--sombra); }
+
+.cartao-cuidado > span { font-size: 2rem; }
+
+.cartao-cuidado h3 { margin: 10px 0 5px; }
+
+.cartao-cuidado p { margin: 0; color: var(--texto-suave); }
+
+.moldura-video, .moldura-mapa { overflow: hidden; border-radius: var(--raio); background: #e6d8d0; box-shadow: var(--sombra); }
+
+.moldura-video { width: min(850px, 100%); margin-inline: auto; aspect-ratio: 16 / 9; }
+
+.moldura-video iframe, .moldura-mapa iframe { display: block; width: 100%; height: 100%; border: 0; }
+
+.observacao { color: var(--texto-suave); font-size: .88rem; text-align: center; }
+
+.moldura-mapa { height: 420px; }
+
+.cabecalho-secao > p:not(.identificador-secao) { color: var(--texto-suave); }
+
+/* 8. Página Contato: formulário e mensagens de validação. */
+
+.secao-contato { padding-block: 65px 85px; }
+
+.cartao-contato { display: grid; grid-template-columns: .85fr 1.15fr; gap: 45px; padding: clamp(22px, 4vw, 48px); border-radius: 22px; background: white; box-shadow: var(--sombra); }
+
+.texto-contato > p:not(.identificador-secao) { color: var(--texto-suave); }
+
+.aviso-privacidade { margin-top: 22px; padding: 15px; border-left: 4px solid var(--laranja); border-radius: 8px; background: var(--pessego); color: var(--texto-suave); font-size: .9rem; }
+
+.formulario-contato { display: grid; gap: 17px; }
+
+.campo-formulario { display: grid; gap: 7px; }
+
+.campo-formulario label { font-weight: 800; }
+
+.campo-formulario label span { color: var(--coral-escuro); }
+
+.campo-formulario input, .campo-formulario textarea {
+
+  width: 100%;
+
+  min-height: 48px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #cdbdb5;
+
+  border-radius: 9px;
+
+  background: #fffdfb;
+
+  color: var(--texto);
+
+}
+
+.campo-formulario textarea { min-height: 145px; resize: vertical; }
+
+.campo-formulario input[aria-invalid="true"], .campo-formulario textarea[aria-invalid="true"] { border: 2px solid #b42318; }
+
+.mensagem-erro { min-height: 1.2em; color: #b42318; font-size: .85rem; }
+
+.botao-enviar { justify-self: start; min-width: 180px; }
+
+.mensagem-retorno { min-height: 1.5em; margin: 0; font-weight: 800; }
+
+.mensagem-retorno.sucesso { color: #176b39; }
+
+.mensagem-retorno.erro { color: #b42318; }
+
+.texto-obrigatorio { margin: 0; color: var(--texto-suave); font-size: .82rem; }
+
+/* 9. Rodapé compartilhado. */
+
+.rodape { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 20px 30px; padding: 30px max(6%, 24px) 18px; background: var(--coral); color: white; }
+
+.marca-rodape .marca-nome span { color: #ffe0bd; }
+
+.rodape > p { margin: 0; font-size: .9rem; }
+
+.links-rodape { display: flex; flex-wrap: wrap; gap: 18px; font-weight: 800; }
+
+.links-rodape a:hover { text-decoration: underline; }
+
+.rodape small { grid-column: 1 / -1; padding-top: 15px; border-top: 1px solid rgb(255 255 255 / 30%); text-align: center; }
+
+.faixa-contato { display: flex;gap: 20px;height: 12rem; align-items: center; flex-direction: column;margin-top: 6rem; padding: 20px; border-radius: 22px;  }
+
+/* 10. Tablet: navegação recolhida e grades com menos colunas. */
+
+@media (max-width: 900px) {
+
+  .cabecalho { min-height: 74px; }
+
+  .botao-menu { display: block; }
+
+  .navegacao {
+
+    position: absolute; top: 100%; right: 0; left: 0;
+
+    display: none; align-items: stretch; flex-direction: column;
+
+    gap: 14px; padding: 22px 6%; background: var(--coral-escuro);
+
+  }
+
+  .navegacao.menu-aberto { display: flex; }
+
+  .navegacao .botao { justify-content: center; }
+
+  .secao-apresentacao, .bloco-conteudo { gap: 28px; }
+
+  .secao-guia-adocao, .secao-duvidas { gap: 35px; }
+
+  .imagem-guia-adocao { height: 370px; }
+
+  .cartao-contato { grid-template-columns: 1fr; gap: 25px; }
+
+  .rodape { grid-template-columns: 1fr 1fr; }
+
+  .rodape > p { grid-column: 1 / -1; }
+
+  .links-rodape { grid-column: 1 / -1; }
+
+}
+
+/* 11. Celulares: uma coluna, botões largos e imagens proporcionais. */
+
+@media (max-width: 620px) {
+
+  html { scroll-padding-top: 75px; }
+
+  .cabecalho { padding-inline: 5%; }
+
+  .marca-nome { font-size: 1.35rem; }
+
+  .destaque-inicial { min-height: 440px; padding: 55px 7%; background-position: 62% center; }
+
+  .destaque-conteudo h1 { font-size: clamp(2.4rem, 11vw, 3.5rem); }
+
+  .grupo-botoes { align-items: stretch; flex-direction: column; }
+
+  .grupo-botoes .botao { width: 100%; }
+
+  .secao { width: 88%; }
+
+  .secao-apresentacao, .bloco-conteudo { grid-template-columns: 1fr; padding-block: 52px; }
+
+  .secao-guia-adocao, .secao-duvidas { grid-template-columns: 1fr; gap: 28px; padding-block: 55px; }
+
+  .conteudo-guia-adocao h2 { max-width: 360px; font-size: clamp(2.5rem, 11vw, 3.5rem); }
+
+  .imagem-guia-adocao { height: 350px; border-radius: 100px 100px 16px 16px; }
+
+  .item-duvida summary { min-height: 66px; }
+
+  .imagem-apresentacao { height: 250px; }
+
+  .grade-animais, .grade-cuidados { grid-template-columns: 1fr; }
+
+  .cartao-animal { display: grid; grid-template-columns: 42% 1fr; align-items: center; }
+
+  .cartao-animal img { height: 145px; }
+
+  .faixa-contato { align-items: flex-start; flex-direction: column; }
+
+  .cabecalho-pagina { padding-block: 48px; }
+
+  .secao-artigo, .secao-contato { padding-block: 45px 55px; }
+
+  .imagem-artigo { min-height: 230px; }
+
+  .imagem-guia-adocao { height: 300px; border-radius: 82px 82px 14px 14px; }
+
+  .secao-duvidas { padding-block: 48px 58px; }
+
+  .moldura-mapa { height: 330px; }
+
+  .rodape { grid-template-columns: 1fr; }
+
+  .rodape > p, .links-rodape, .rodape small { grid-column: auto; }
+
+  .links-rodape { gap: 15px; }
+
+}
+
+/* 12. Celulares estreitos: evita cartões comprimidos. */
+
+@media (max-width: 380px) {
+
+  .cartao-animal { grid-template-columns: 1fr; }
+
+  .cartao-animal img { height: 205px; }
+
+  .botao { width: 100%; }
+
+  .moldura-mapa { height: 290px; }
+
+}
+
+/* 13. Respeita usuários que preferem movimento reduzido. */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *, *::before, *::after {
+
+    scroll-behavior: auto !important;
+
+    transition-duration: .01ms !important;
+
+    animation-duration: .01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+  }
+
+}
+
+/* ==========================================
+
+   PETLIFE - GUIA DE ADOÇÃO RESPONSÁVEL
+
+\========================================== */
+
+.guia-adocao {
+
+    padding: 75px 6%;
+
+    background: #fff7f1;
+
+}
+
+.guia-adocao-container {
+
+    max-width: 1120px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 55px;
+
+}
+
+/* Conteúdo textual */
+
+.guia-adocao-texto {
+
+    max-width: 520px;
+
+}
+
+.guia-adocao-texto .identificador {
+
+    color: #ff604f;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+}
+
+.guia-adocao-texto h2 {
+
+    color: #453a36;
+
+    font-size: clamp(28px, 3.5vw, 42px);
+
+    line-height: 1.15;
+
+    margin: 12px 0 18px;
+
+}
+
+.guia-adocao-texto h2 span {
+
+    color: #ff604f;
+
+}
+
+.guia-adocao-texto p {
+
+    color: #806f68;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+
+}
+
+/* Imagem */
+
+.guia-adocao-imagem {
+
+    width: 100%;
+
+    height: 350px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    box-shadow: 15px 15px 0 #f4d5c6;
+
+}
+
+.guia-adocao-imagem img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .4s ease;
+
+}
+
+.guia-adocao-imagem img:hover {
+
+    transform: scale(1.04);
+
+}
+
+/* ==========================================
+
+   PETLIFE - DÚVIDAS FREQUENTES (FAQ)
+
+\========================================== */
+
+.duvidas-frequentes {
+
+    padding: 75px 6%;
+
+    background: #f5e7dd;
+
+}
+
+.duvidas-container {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+}
+
+/* Cabeçalho do FAQ */
+
+.duvidas-cabecalho {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+.duvidas-cabecalho span {
+
+    color: #ff604f;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+}
+
+.duvidas-cabecalho h2 {
+
+    color: #453a36;
+
+    font-size: clamp(27px, 3.5vw, 40px);
+
+    margin-top: 10px;
+
+    line-height: 1.2;
+
+}
+
+/* Cartões de perguntas */
+
+.duvidas-lista {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+.duvida-item {
+
+    background: #ffffff;
+
+    border: 1px solid #f0d6ca;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 16px #5b3c3010;
+
+    transition: box-shadow .3s ease;
+
+}
+
+.duvida-item:hover {
+
+    box-shadow: 0 8px 22px #5b3c3020;
+
+}
+
+/* Botão da pergunta */
+
+.duvida-pergunta {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 20px 23px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #453a36;
+
+    font-family: 'Nunito', sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 900;
+
+    text-align: left;
+
+    cursor: pointer;
+
+}
+
+.duvida-pergunta:hover {
+
+    color: #e94f43;
+
+}
+
+/* Ícone de expansão */
+
+.duvida-icone {
+
+    flex-shrink: 0;
+
+    color: #ff604f;
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+    transition: transform .3s ease;
+
+}
+
+.duvida-item[open] .duvida-icone {
+
+    transform: rotate(45deg);
+
+}
+
+/* Resposta */
+
+.duvida-resposta {
+
+    padding: 0 23px 20px;
+
+    color: #806f68;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+/* Acessibilidade de teclado */
+
+.duvida-pergunta:focus-visible {
+
+    outline: 3px solid #244b9e;
+
+    outline-offset: -3px;
+
+}
+
+/* ==========================================
+
+   RESPONSIVIDADE - TABLETS
+
+\========================================== */
+
+@media (max-width: 850px) {
+
+    .guia-adocao-container {
+
+        gap: 30px;
+
+    }
+
+    .guia-adocao-imagem {
+
+        height: 300px;
+
+    }
+
+}
+
+/* ==========================================
+
+   RESPONSIVIDADE - CELULARES
+
+\========================================== */
+
+@media (max-width: 620px) {
+
+    .guia-adocao {
+
+        padding: 50px 6%;
+
+    }
+
+    .guia-adocao-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+    }
+
+    .guia-adocao-imagem {
+
+        height: 250px;
+
+        box-shadow: 9px 9px 0 #f4d5c6;
+
+    }
+
+    .guia-adocao-texto h2 {
+
+        font-size: 29px;
+
+    }
+
+    .duvidas-frequentes {
+
+        padding: 50px 6%;
+
+    }
+
+    .duvidas-cabecalho {
+
+        margin-bottom: 25px;
+
+    }
+
+    .duvida-pergunta {
+
+        padding: 17px;
+
+        font-size: 14px;
+
+    }
+
+    .duvida-resposta {
+
+        padding: 0 17px 17px;
+
+        font-size: 13px;
+
+    }
+
+}
+
+/* =====================================================
+
+   AJUSTES VISUAIS FINAIS - PETLIFE
+
+   Adicione este trecho no FINAL do style.css
+
+\===================================================== */
+
+/* 1. CABEÇALHO E MENU */
+
+/* Organiza os links e mantém o menu com fundo próprio */
+
+.cabecalho {
+
+    background: #ff604f;
+
+    box-shadow: 0 4px 16px rgba(69, 58, 54, 0.18);
+
+}
+
+/* Links do menu */
+
+.navegacao > a:not(.botao):not(.botao-navegacao) {
+
+    padding: 9px 5px;
+
+    border-radius: 7px;
+
+    transition: background 0.25s ease,
+
+                color 0.25s ease,
+
+                transform 0.25s ease;
+
+}
+
+.navegacao > a:not(.botao):not(.botao-navegacao):hover {
+
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.20);
+
+    transform: translateY(-2px);
+
+}
+
+/* Destaque para a página que está aberta */
+
+.navegacao a[aria-current="page"] {
+
+    color: #ffe0bd;
+
+    text-decoration: underline;
+
+    text-underline-offset: 6px;
+
+}
+
+/* Efeito quando o link é pressionado */
+
+.navegacao a:active {
+
+    transform: scale(0.96);
+
+}
+
+/* 2. BOTÕES SEJA PARCEIRO E QUERO ADOTAR */
+
+/* Mantém os dois botões separados dos links do menu */
+
+.botao-grupo-navegacao {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 14px;
+
+    margin-right: 0.1%;
+
+    padding-left: 8rem;
+
+}
+
+/* Aparência dos botões do menu da página inicial */
+
+.botao-navegacao,
+
+.botao-menu-adocao {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    min-height: 40px;
+
+    padding: 9px 17px;
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+
+    border-radius: 10px;
+
+    background: #fff0d7;
+
+    color: #e94f43;
+
+    font-weight: 900;
+
+    white-space: nowrap;
+
+    transition: all 0.25s ease;
+
+}
+
+/* O botão Quero adotar fica com maior destaque */
+
+.botao-menu-adocao {
+
+    background: #ffffff;
+
+    color: #e94f43;
+
+}
+
+/* Hover dos botões */
+
+.botao-navegacao:hover,
+
+.botao-menu-adocao:hover {
+
+    background: #e94f43;
+
+    color: #ffffff;
+
+    border-color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 6px 15px rgba(69, 58, 54, 0.18);
+
+}
+
+/* 3. SOMBRAS NAS IMAGENS */
+
+/* Imagens dos animais */
+
+.animal-imagem {
+
+    box-shadow: 0 5px 15px rgba(69, 58, 54, 0.18);
+
+}
+
+/* Imagens das notícias */
+
+.cartao-noticia > img {
+
+    filter: drop-shadow(0 5px 8px rgba(69, 58, 54, 0.16));
+
+    transition: transform 0.3s ease,
+
+                filter 0.3s ease;
+
+}
+
+/* Efeito ao passar o mouse nos cards de notícias */
+
+.cartao-noticia {
+
+    transition: transform 0.3s ease,
+
+                box-shadow 0.3s ease;
+
+}
+
+.cartao-noticia:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: 0 14px 28px rgba(69, 58, 54, 0.17);
+
+}
+
+.cartao-noticia:hover > img {
+
+    transform: scale(1.025);
+
+    filter: drop-shadow(0 7px 12px rgba(69, 58, 54, 0.23));
+
+}
+
+/* Links das notícias */
+
+.cartao-noticia a {
+
+    display: inline-block;
+
+    transition: color 0.2s ease,
+
+                transform 0.2s ease;
+
+}
+
+.cartao-noticia a:hover {
+
+    color: #ff604f;
+
+    text-decoration: underline;
+
+    transform: translateX(4px);
+
+}
+
+/* Sombras em outras imagens do projeto */
+
+.introducao-imagem,
+
+.guia-adocao-imagem,
+
+.imagem-artigo,
+
+.imagem-detalhe-pet {
+
+    box-shadow: 0 9px 24px rgba(69, 58, 54, 0.16);
+
+}
+
+/* 4. PERGUNTAS FREQUENTES */
+
+/* Centraliza a seção na página */
+
+.secao-duvidas {
+
+    width: min(1120px, 88%);
+
+    margin: 0 auto;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+/* Alinha o texto da introdução */
+
+.introducao-duvidas {
+
+    margin-inline: auto;
+
+}
+
+/* Organiza a lista de perguntas */
+
+.lista-duvidas {
+
+    width: 100%;
+
+    border-top: 1px solid #e8cfc3;
+
+}
+
+/* Cartões individuais das perguntas */
+
+.item-duvida {
+
+    margin-bottom: 12px;
+
+    padding-inline: 17px;
+
+    border: 1px solid #f0d6ca;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    box-shadow: 0 5px 15px rgba(69, 58, 54, 0.07);
+
+    transition: box-shadow 0.25s ease,
+
+                transform 0.25s ease;
+
+}
+
+.item-duvida:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(69, 58, 54, 0.13);
+
+}
+
+.item-duvida summary {
+
+    padding-block: 20px;
+
+    border-radius: 8px;
+
+}
+
+.item-duvida summary:hover {
+
+    color: #e94f43;
+
+}
+
+.resposta-duvida {
+
+    padding-bottom: 20px;
+
+    line-height: 1.8;
+
+}
+
+/* 5. PÁGINA DE CONTATO */
+
+/* Centraliza a seção de contato */
+
+.secao-contato {
+
+    width: min(1100px, 90%);
+
+    margin-inline: auto;
+
+}
+
+/* Centraliza o cartão e seus conteúdos */
+
+.cartao-contato {
+
+    width: 100%;
+
+    max-width: 1050px;
+
+    margin-inline: auto;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+/* Organiza o texto de apresentação */
+
+.texto-contato {
+
+    width: 100%;
+
+    max-width: 450px;
+
+    margin-inline: auto;
+
+}
+
+/* Organiza o formulário */
+
+.formulario-contato {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    margin-inline: auto;
+
+}
+
+/* Centraliza o cabeçalho das páginas de contato e adoção */
+
+.cabecalho-pagina {
+
+    padding: 65px 20px;
+
+    text-align: center;
+
+}
+
+.cabecalho-pagina h1 {
+
+    margin: 8px 0 12px;
+
+}
+
+.cabecalho-pagina > p:last-child {
+
+    max-width: 650px;
+
+    margin-inline: auto;
+
+    color: #806f68;
+
+}
+
+/* Melhora a aparência dos campos */
+
+.campo-formulario input,
+
+.campo-formulario textarea,
+
+.campo-formulario select {
+
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 12px 14px;
+
+    border: 1px solid #cdbdb5;
+
+    border-radius: 9px;
+
+    background: #fffdfb;
+
+    color: #453a36;
+
+    font: inherit;
+
+    transition: border-color 0.2s ease,
+
+                box-shadow 0.2s ease;
+
+}
+
+.campo-formulario input:focus,
+
+.campo-formulario textarea:focus,
+
+.campo-formulario select:focus {
+
+    outline: none;
+
+    border-color: #ff604f;
+
+    box-shadow: 0 0 0 3px rgba(255, 96, 79, 0.15);
+
+}
+
+/* Centraliza o botão e as mensagens do formulário */
+
+.botao-enviar {
+
+    justify-self: center;
+
+}
+
+.mensagem-retorno,
+
+.texto-obrigatorio {
+
+    text-align: center;
+
+}
+
+/* 6. FORMULÁRIO DE ADOÇÃO */
+
+.secao-formulario-adocao {
+
+    width: min(1000px, 90%);
+
+    margin-inline: auto;
+
+}
+
+.formulario-adocao {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: clamp(20px, 4vw, 40px);
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow: 0 8px 25px rgba(69, 58, 54, 0.10);
+
+}
+
+.secao-formulario-adocao .cabecalho-secao > div {
+
+    max-width: 700px;
+
+    margin-inline: auto;
+
+}
+
+.grade-campos-adocao {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+}
+
+.campo-formulario-largo {
+
+    grid-column: 1 / -1;
+
+}
+
+.aviso-privacidade {
+
+    line-height: 1.7;
+
+}
+
+/* 7. RODAPÉ DA PÁGINA INICIAL */
+
+/* Organiza as quatro colunas do rodapé */
+
+.rodape:has(.rodape-coluna) {
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    align-items: start;
+
+    justify-items: center;
+
+    gap: 35px;
+
+    padding: 50px max(6%, 25px) 22px;
+
+    text-align: center;
+
+}
+
+/* Centraliza a marca e as redes sociais */
+
+.rodape:has(.rodape-coluna) .rodape-marca {
+
+    width: 100%;
+
+    max-width: 280px;
+
+    margin-inline: auto;
+
+}
+
+.rodape:has(.rodape-coluna) .marca-rodape {
+
+    justify-content: center;
+
+}
+
+.rodape:has(.rodape-coluna) .redes-sociais {
+
+    justify-content: center;
+
+}
+
+/* Centraliza os links das colunas */
+
+.rodape:has(.rodape-coluna) .rodape-coluna {
+
+    width: 100%;
+
+}
+
+.rodape:has(.rodape-coluna) .rodape-coluna a {
+
+    margin-block: 9px;
+
+    transition: color 0.2s ease,
+
+                transform 0.2s ease;
+
+}
+
+.rodape:has(.rodape-coluna) .rodape-coluna a:hover {
+
+    color: #ffe0bd;
+
+    transform: translateY(-2px);
+
+    text-decoration: underline;
+
+}
+
+/* Linha de direitos autorais */
+
+.rodape:has(.rodape-coluna) .direitos-autorais {
+
+    width: 100%;
+
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+}
+
+/* 8. RODAPÉ DAS PÁGINAS CONTATO E ADOÇÃO */
+
+/* Essas páginas possuem um rodapé com estrutura diferente */
+
+.rodape:not(:has(.rodape-coluna)) {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    padding: 40px 6% 22px;
+
+    text-align: center;
+
+}
+
+.rodape:not(:has(.rodape-coluna)) .marca-rodape {
+
+    justify-content: center;
+
+}
+
+.rodape:not(:has(.rodape-coluna)) > p {
+
+    max-width: 500px;
+
+    margin: 0 auto;
+
+}
+
+.links-rodape {
+
+    justify-content: center;
+
+    gap: 22px;
+
+}
+
+.links-rodape a {
+
+    transition: color 0.2s ease,
+
+                transform 0.2s ease;
+
+}
+
+.links-rodape a:hover {
+
+    color: #ffe0bd;
+
+    transform: translateY(-2px);
+
+}
+
+.rodape:not(:has(.rodape-coluna)) small {
+
+    width: 100%;
+
+    text-align: center;
+
+}
+
+/* 9. RESPONSIVIDADE PARA TABLETS */
+
+@media (max-width: 900px) {
+
+    .navegacao {
+
+        margin: 0;
+
+        padding: 22px 6%;
+
+        border-radius: 0;
+
+        background: #e94f43;
+
+    }
+
+    .navegacao > a:not(.botao):not(.botao-navegacao) {
+
+        padding: 10px 12px;
+
+    }
+
+    .botao-grupo-navegacao {
+
+        width: 100%;
+
+        margin-left: 0;
+
+        padding-left: 0;
+
+        justify-content: center;
+
+    }
+
+    .botao-navegacao,
+
+    .botao-menu-adocao {
+
+        min-height: 44px;
+
+    }
+
+    .secao-duvidas {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+    }
+
+    .introducao-duvidas {
+
+        max-width: 650px;
+
+        text-align: center;
+
+    }
+
+    .cartao-contato {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+    }
+
+    .texto-contato,
+
+    .formulario-contato {
+
+        max-width: 650px;
+
+    }
+
+    .rodape:has(.rodape-coluna) {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+/* 10. RESPONSIVIDADE PARA CELULARES */
+
+@media (max-width: 620px) {
+
+    .botao-grupo-navegacao {
+
+        align-items: stretch;
+
+        flex-direction: column;
+
+    }
+
+    .botao-navegacao,
+
+    .botao-menu-adocao {
+
+        width: 100%;
+
+    }
+
+    .secao-duvidas {
+
+        width: 90%;
+
+        padding-block: 50px;
+
+    }
+
+    .secao-contato,
+
+    .secao-formulario-adocao {
+
+        width: 90%;
+
+    }
+
+    .cartao-contato {
+
+        padding: 22px;
+
+    }
+
+    .grade-campos-adocao {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .campo-formulario-largo {
+
+        grid-column: auto;
+
+    }
+
+    .formulario-adocao {
+
+        padding: 20px;
+
+    }
+
+    .botao-enviar {
+
+        width: 100%;
+
+    }
+
+    .rodape:has(.rodape-coluna) {
+
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+    }
+
+    .rodape:has(.rodape-coluna) .direitos-autorais {
+
+        grid-column: auto;
+
+    }
+
+    .links-rodape {
+
+        flex-direction: column;
+
+        gap: 12px;
+
+    }
+
+}
+
+/* 11. ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .cartao-noticia,
+
+    .cartao-noticia > img,
+
+    .navegacao a,
+
+    .botao-navegacao,
+
+    .botao-menu-adocao {
+
+        transition: none;
+
+    }
+
+}
+
+/* ETAPAS DA ADOÇÃO */
+
+.etapas-adocao {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+}
+
+.etapa-adocao {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 10px;
+
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+
+    background-color: #f7d3bf8c;
+
+}
+
+.etapa-adocao:hover {
+
+    background-color: #fff0e8;
+
+    transform: translateX(5px);
+
+}
+
+.numero-etapa {
+
+    min-width: 36px;
+
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: var(--coral);
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+}
+
+.etapa-adocao h3 {
+
+    margin: 0 0 5px;
+
+    color: #333;
+
+    font-size: 16px;
+
+}
+
+.etapa-adocao p {
+
+    margin: 0;
+
+    color: #666;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+/* ALINHAMENTO DA SEÇÃO DE ETAPAS DA ADOÇÃO */
+
+#etapas-adocao .introducao-texto {
+
+    text-align: left;
+
+    align-items: flex-start;
+
+}
+
+#etapas-adocao .identificador-secao {
+
+    display: block;
+
+    text-align: left;
+
+    width: 100%;
+
+}
+
+#etapas-adocao .introducao-texto h2 {
+
+    text-align: left;
+
+    width: 100%;
+
+    margin-bottom: 15px;
+
+}
+
+#etapas-adocao .introducao-texto > p {
+
+    text-align: left;
+
+    width: 100%;
+
+    line-height: 1.7;
+
+}
+
+#etapas-adocao .etapas-adocao {
+
+    width: 100%;
+
+    align-items: flex-start;
+
+}
+
+#etapas-adocao .etapa-adocao {
+
+    width: 100%;
+
+    text-align: left;
+
+    justify-content: flex-start;
+
+}
+
+#etapas-adocao .etapa-adocao div {
+
+    text-align: left;
+
+}
+
+/* SEÇÃO DE DEPOIMENTOS */
+
+.secao-depoimentos {
+
+    max-width: 1200px;
+
+    margin: 50px auto;
+
+    padding: 50px 30px;
+
+    border-radius: 18px;
+
+}
+
+/* CABEÇALHO */
+
+.cabecalho-depoimentos {
+
+    margin-bottom: 35px;
+
+    text-align: left;
+
+}
+
+.cabecalho-depoimentos h2 {
+
+    color: #333;
+
+    font-size: 32px;
+
+    margin: 10px 0;
+
+}
+
+.cabecalho-depoimentos h2 span {
+
+    color:var(--coral);
+
+}
+
+.cabecalho-depoimentos p {
+
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+}
+
+/* GRADE DOS CARTÕES */
+
+.grade-depoimentos {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+
+}
+
+/* CARTÕES */
+
+.cartao-depoimento {
+
+    background-color: #ffffff;
+
+   
+
+    border-radius: 14px;
+
+    border: 1px solid #f0e7df;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.cartao-depoimento:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.10);
+
+}
+
+/* ESTRELAS */
+
+.estrelas {
+
+    color: #d6a13c;
+
+    font-size: 23px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+
+}
+
+/* TEXTO */
+
+.texto-depoimento {
+
+    color: #555;
+
+    font-size: 15px;
+
+   
+
+  
+
+}
+
+/* AUTOR */
+
+.autor-depoimento {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+
+   
+
+}
+
+.avatar-depoimento {
+
+    width: 48px;
+
+    height: 48px;
+
+    min-width: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #f5c6ad;
+
+    color: #8d4936;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
+
+.autor-depoimento h3 {
+
+    color: #333;
+
+    font-size: 15px;
+
+    margin-bottom: 4px;
+
+}
+
+.autor-depoimento span {
+
+    color: #888;
+
+    font-size: 13px;
+
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+    .grade-depoimentos {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .secao-depoimentos {
+
+        margin: 40px 15px;
+
+        padding: 30px 18px;
+
+    }
+
+    .cabecalho-depoimentos h2 {
+
+        font-size: 26px;
+
+    }
+
+    .grade-depoimentos {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .cartao-depoimento {
+
+        padding: 22px 18px;
+
+    }
+
+}
+
+/* FOTOS DOS DEPOIMENTOS */
+
+.foto-depoimento {
+
+    width: 100%;
+
+    height: 190px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 10px;
+
+    margin-bottom: 18px;
+
+    display: block;
+
+}
+
+/* Ajuste dos cartões */
+
+.cartao-depoimento {
+
+    overflow: hidden;
+
+}
+
+@media (max-width: 600px) {
+
+    .foto-depoimento {
+
+        height: 220px;
+
+    }
+
+}
+
+/* CARROSSEL DE DEPOIMENTOS */
+
+.secao-depoimentos {
+
+    max-width: 1200px;
+
+    margin: 80px auto;
+
+    padding: 50px 35px;
+
+    border-radius: 18px;
+
+}
+
+.cabecalho-depoimentos {
+
+    margin-bottom: 30px;
+
+    text-align: left;
+
+}
+
+.cabecalho-depoimentos h2 {
+
+    color: #333;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+
+}
+
+.cabecalho-depoimentos h2 span {
+
+    color: #bd684d;
+
+}
+
+.cabecalho-depoimentos p {
+
+    color: #666;
+
+    font-size: 15px;
+
+}
+
+/* ESTRUTURA DO CARROSSEL */
+
+.carrossel-depoimentos {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+.janela-depoimentos {
+
+    width: 100%;
+
+    overflow: hidden;
+
+}
+
+.trilho-depoimentos {
+
+    display: flex;
+
+    gap: 20px;
+
+    transition: transform 0.5s ease;
+
+}
+
+/* CARTÕES */
+
+.cartao-depoimento {
+
+    flex: 0 0 calc((100% - 40px) / 3);
+
+    min-width: 0;
+
+    padding: 20px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: box-shadow 0.3s ease;
+
+}
+
+.cartao-depoimento:hover {
+
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.10);
+
+}
+
+/* FOTOS */
+
+.foto-depoimento {
+
+    width: 100%;
+
+    height: 190px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 10px;
+
+    margin-bottom: 15px;
+
+}
+
+/* AUTOR */
+
+.autor-depoimento {
+
+    margin-bottom: 10px;
+
+}
+
+.autor-depoimento h3 {
+
+    color: #333;
+
+    font-size: 16px;
+
+    margin-bottom: 4px;
+
+}
+
+.autor-depoimento span {
+
+    color: #888;
+
+    font-size: 13px;
+
+}
+
+/* COMENTÁRIO */
+
+.texto-depoimento {
+
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin: 0;
+
+}
+
+/* SETAS */
+
+.seta-depoimento {
+
+    min-width: 42px;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: 1px solid #ead8ca;
+
+    border-radius: 50%;
+
+    background-color: #fff;
+
+    color: var(--coral);
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.3s;
+
+}
+
+.seta-depoimento:hover {
+
+    background-color: var(--coral);
+
+    color: #fff;
+
+}
+
+.seta-depoimento:focus-visible,
+
+.indicador:focus-visible {
+
+    outline: 3px solid var(--coral);
+
+    outline-offset: 3px;
+
+}
+
+/* INDICADORES */
+
+.indicadores-depoimentos {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+}
+
+.indicador {
+
+    width: 10px;
+
+    height: 10px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #e5cfc3;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+.indicador.ativo {
+
+    width: 25px;
+
+    border-radius: 10px;
+
+    background-color: var(--coral);
+
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .cartao-depoimento {
+
+        flex-basis: calc((100% - 20px) / 2);
+
+    }
+
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .secao-depoimentos {
+
+        margin: 40px 15px;
+
+        padding: 30px 15px;
+
+    }
+
+    .cabecalho-depoimentos h2 {
+
+        font-size: 26px;
+
+    }
+
+    .carrossel-depoimentos {
+
+        gap: 8px;
+
+    }
+
+    .cartao-depoimento {
+
+        flex-basis: 100%;
+
+    }
+
+    .foto-depoimento {
+
+        height: 220px;
+
+    }
+
+    .seta-depoimento {
+
+        min-width: 32px;
+
+        width: 32px;
+
+        height: 32px;
+
+        font-size: 14px;
+
+    }
+
+}
+
+/* ACESSIBILIDADE: RESPEITA REDUÇÃO DE MOVIMENTO */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .trilho-depoimentos {
+
+        transition: none;
+
+    }
+
+}
