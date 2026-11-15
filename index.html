@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PetLife — encontre seu novo melhor amigo e transforme uma vida por meio da adoção responsável.">
+  <meta name="theme-color" content="#ff604f">
+  <title>PetLife | Adoção de Animais</title>
+
+  <!-- Carrega a fonte Nunito e antecipa a conexão com o Google Fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Folha de estilos principal do projeto. -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- =========================================================
+       1. CABEÇALHO E NAVEGAÇÃO
+       Contém a identidade visual da PetLife, os links das seções
+       e o botão usado para abrir o menu em telas menores.
+       ========================================================= -->
+  <!-- Cabeçalho principal: marca, navegação e botão de menu para telas menores. -->
+  <header class="cabecalho" id="inicio">
+    <a class="marca" href="#inicio" aria-label="PetLife — página inicial">
+      <span class="marca-imagem">
+        <img src="imgs/Group 1.png" alt="" width="90" height="70">
+      </span>
+      <span class="marca-nome">Pet<span>Life</span></span>
+    </a>
+
+    <button
+      class="botao-menu"
+      type="button"
+      aria-label="Abrir menu de navegação"
+      aria-controls="navegacao-principal"
+      aria-expanded="false">
+      <span aria-hidden="true">☰</span>
+    </button>
+
+    <nav class="navegacao" id="navegacao-principal" aria-label="Navegação principal">
+      <a href="#adocao">Animais</a>
+      <a href="#historias">Histórias</a>
+      <a href="#resgate">Resgate</a>
+      <a href="#locais">Locais</a>
+      <a href="#noticias">Notícias</a>
+      <div class="botao-grupo-navegacao">
+      <a class="botao-navegacao" href="PetLife_contato.html">Seja voluntario</a>
+      <a class="botao-navegacao-destaque" href="#adocao">Quero adotar</a>
+      </div>
+     
+    </nav>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         2. DESTAQUE INICIAL
+         Apresenta a mensagem principal do site e os atalhos para
+         encontrar animais e conhecer o processo de adoção.
+         ========================================================= -->
+    <!-- Apresentação principal: mensagem da marca e acesso rápido à adoção. -->
+    <section class="destaque-inicial" aria-labelledby="titulo-principal">
+      <div class="destaque-conteudo">
+        <span class="texto-superior">Um novo amigo está esperando por você</span>
+        <h1 id="titulo-principal">Todo amor merece <strong>um lar.</strong></h1>
+        <p>Adote com responsabilidade e transforme a vida de um animal — e a sua também.</p>
+        <div class="destaque-acoes">
+          <a class="botao botao-principal" href="#adocao">Encontre seu melhor amigo</a>
+          <a class="botao botao-contorno" href="#etapas-adocao">Como adotar</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         3. VITRINE DE ANIMAIS PARA ADOÇÃO
+         Os cards apresentam os dados de cada animal. Os atributos
+         data-* guardam informações que podem ser utilizadas pelo JS.
+         ========================================================= -->
+    <!-- Vitrine de animais disponíveis para adoção. -->
+    <section class="secao-container secao-adocao" id="adocao" aria-labelledby="titulo-adocao">
+      <div class="cabecalho-secao">
+        <div>
+          <span class="identificador-secao">Conheça animais disponíveis para adoção</span>
+          <h2 id="titulo-adocao">Encontre seu melhor amigo</h2>
+        </div>
+      </div>
+
+      <div class="grupo-animais">
+        <div class="cabecalho-grupo">
+          <h3>Gatinhos</h3>
+          <a href="#contato">Ver todos</a>
+        </div>
+
+        <div class="grade-animais">
+        
+      <article class="cartao-animal cartao-gato"
+          data-nome="Maria"
+          data-especie="Gata"
+          data-idade="1 ano"
+          data-porte="Pequeno"
+          data-personalidade="Carinhosa e tranquila">
+
+           <div class="animal-imagem">
+              <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=700&q=85" alt="Gata Maria" loading="lazy">
+            </div>
+            <div class="animal-informacoes">
+              <div><h4>Maria</h4><p>Carinhosa · 8 meses</p></div>
+
+          <a href="adotar.html" class="botao-adotar">
+              Adote agora
+          </a>
+           </div>
+      </article>
+        
+      <article class="cartao-animal cartao-gato"
+          data-nome="Chico"
+          data-especie="Gato"
+          data-idade="5 meses"
+          data-porte="Pequeno"
+          data-personalidade="Brincalhão ">
+        <div class="animal-imagem">
+          <img src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?auto=format&fit=crop&w=700&q=85" alt="Gato Chico" loading="lazy">
+      </div>
+        <div class="animal-informacoes">
+          <h3>Chico</h3>
+          <p>Brincalhão · 5 meses</p>
+
+          <a href="adotar.html" class="botao-adotar">
+              Adote agora
+          </a>
+          </div>
+      </article>
+
+
+        <article class="cartao-animal cartao-gato"
+        data-nome="Luna"
+        data-especie="Gata"
+        data-idade="1 ano"
+        data-porte="Pequeno"
+        data-personalidade="Tranquila ">
+        <div class="animal-imagem">
+            <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?auto=format&fit=crop&w=700&q=85" alt="Gata Luna" loading="lazy">
+        </div>
+        <div class="animal-informacoes">
+          <h3>Luna</h3>
+          <p>Tranquila · 1 ano</p>
+       
+
+        <a href="adotar.html" class="botao-adotar">
+            Adote agora
+        </a>
+         </div>
+    </article>
+
+        </div>
+      </div>
+
+      <div class="grupo-animais">
+        <div class="cabecalho-grupo">
+          <h3>Cachorrinhos</h3>
+          <a href="#contato">Ver todos</a>
+        </div>
+
+        <div class="grade-animais">
+
+      <article class="cartao-animal  cartao-cachorro"
+              data-nome="Thor"
+              data-especie="Cachorro"
+              data-idade="2 anos"
+              data-porte="Médio"
+              data-personalidade="Protetor ">
+          <div class="animal-imagem">
+                <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=700&q=85" alt="Cachorro Thor" loading="lazy">
+          </div>
+            <div class="animal-informacoes">
+
+             <h3>Thor</h3>
+              <p>Protetor · 2 anos</p>
+
+              <a href="adotar.html" class="botao-adotar">
+                  Adote agora
+              </a>
+               </div>
+          </article>
+
+
+               <article class="cartao-animal  cartao-cachorro"
+              data-nome="Scooby"
+              data-especie="Cachorro"
+              data-idade="4 meses"
+              data-porte="Médio"
+              data-personalidade="Amigável ">
+            <div class="animal-imagem">
+                        <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?auto=format&fit=crop&w=700&q=85" alt="Cachorro Scooby" loading="lazy">
+            </div>
+            <div class="animal-informacoes">
+              <h3>Scooby</h3>
+              <p>Amigável · 4 meses</p>
+
+              <a href="adotar.html" class="botao-adotar">
+                  Adote agora
+              </a>
+              </div>
+          </article>
+
+           <article class="cartao-animal  cartao-cachorro"
+              data-nome="Fred"
+              data-especie="Cachorro"
+              data-idade=" 1 ano"
+              data-porte="Médio"
+              data-personalidade="Agitado ">
+            <div class="animal-imagem">
+                          <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=700&q=85" alt="Cachorro Fred" loading="lazy">
+            </div>
+            <div class="animal-informacoes">
+              <h3>Fred</h3>
+              <p>Agitado · 1 ano</p>
+
+              <a href="adotar.html" class="botao-adotar">
+                  Adote agora
+              </a>
+              </div>
+          </article>
+
+         
+        </div>
+      </div>
+    </section>
+
+
+  <!-- =========================================================
+       4. ETAPAS DA ADOÇÃO
+       Explica, em sequência, como a pessoa pode solicitar a adoção.
+       ========================================================= -->
+  <!-- SEÇÃO ETAPAS DA ADOÇÃO -->
+<section class="secao-container introducao" id="etapas-adocao">
+
+    <div class="introducao-imagem">
+        <img
+            src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1400&q=85"
+            alt="Cachorro e gato juntos em um momento de tranquilidade"
+            loading="lazy">
+
+        <span class="legenda-imagem">Uma nova amizade começa aqui</span>
+    </div>
+
+    <div class="introducao-texto">
+
+        <span class="identificador-secao">Adote com responsabilidade</span>
+
+        <h2>Etapas da <span>adoção</span></h2>
+
+        <div class="etapas-adocao">
+
+            <div class="etapa-adocao">
+                <span class="numero-etapa">1</span>
+                <div>
+                    <h3>Escolha seu pet</h3>
+                    <p>Conheça os animais disponíveis e escolha aquele que combina com você.</p>
+                </div>
+            </div>
+
+
+            <div class="etapa-adocao">
+                <span class="numero-etapa">2</span>
+                <div>
+                    <h3>Preencha o formulário</h3>
+                    <p>Informe seus dados e envie sua solicitação de adoção.</p>
+                </div>
+            </div>
+
+            <div class="etapa-adocao">
+                <span class="numero-etapa">3</span>
+                <div>
+                    <h3>Aguarde o contato</h3>
+                    <p>Nossa equipe analisará sua solicitação e entrará em contato com você.</p>
+                </div>
+            </div>
+
+            <div class="etapa-adocao">
+                <span class="numero-etapa">4</span>
+                <div>
+                    <h3>Receba seu novo amigo</h3>
+                    <p>Com a adoção aprovada, prepare seu lar para receber muito amor!</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- =========================================================
+     5. DEPOIMENTOS
+     Carrossel com relatos de pessoas que adotaram animais.
+     Os botões e indicadores são utilizados na navegação dos cards.
+     ========================================================= -->
+<!-- SEÇÃO DE DEPOIMENTOS -->
+<section class="secao-depoimentos" id="depoimentos">
+
+    <div class="cabecalho-depoimentos">
+        <div>
+            <h2>Quem adotou, <span>recomenda!</span></h2>
+            <p>Veja histórias de carinho entre animais e suas novas famílias.</p>
+        </div>
+    </div>
+
+    <div class="carrossel-depoimentos">
+
+        <!-- BOTÃO ANTERIOR -->
+        <button class="seta-depoimento anterior"
+                aria-label="Depoimento anterior">
+            &#10094;
+        </button>
+
+        <!-- ÁREA VISÍVEL -->
+        <div class="janela-depoimentos">
+
+            <div class="trilho-depoimentos">
+
+                <!-- DEPOIMENTO 1 -->
+                <article class="cartao-depoimento">
+
+                    <img class="foto-depoimento"
+                         src="https://hermes.media.static.aol.com/media/2026/08/23/c77c9684-71f7-3847-910a-e38ed766b6df/9fea73de-42e7-4198-97c6-148f9be8bf9d.jpg"
+                         alt="Dona abraçando carinhosamente seu cachorro"
+                         loading="lazy">
+
+                  
+
+                    <div class="autor-depoimento">
+                        <div>
+                            <h3>Mariana S.</h3>
+                            <span>Adotou o Thor</span>
+                        </div>
+                    </div>
+
+                    <p class="texto-depoimento">
+                        "Adotar foi uma das melhores decisões da minha vida!
+                        Hoje tenho um companheiro incrível."
+                    </p>
+
+                </article>
+
+                <!-- DEPOIMENTO 2 -->
+                <article class="cartao-depoimento">
+
+                    <img class="foto-depoimento"
+                         src="https://www.banfieldfoundation.org/-/media/Project/Banfield/Main/en/associates/photo/l/associate_01035.jpg?rev=96844227250a4b06a07383ad277d5161"
+                         alt="Mulher abraçando seu cachorro adotado"
+                         loading="lazy">
+
+                  
+
+                    <div class="autor-depoimento">
+                        <div>
+                            <h3>Juliana R.</h3>
+                            <span>Adotou a Mel</span>
+                        </div>
+                    </div>
+
+                    <p class="texto-depoimento">
+                        "O processo foi simples e cheio de carinho.
+                        Minha cachorrinha trouxe muita alegria para nossa casa."
+                    </p>
+
+                </article>
+
+                <!-- DEPOIMENTO 3 -->
+                <article class="cartao-depoimento">
+
+                    <img class="foto-depoimento"
+                         src="https://substackcdn.com/image/fetch/%24s_%21whyi%21%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6131869a-26c9-47aa-b129-f80d78cd4640_1024x1024.webp"
+                         alt="Dona abraçando seu cachorro com carinho"
+                         loading="lazy">
+
+                   
+
+                    <div class="autor-depoimento">
+                        <div>
+                            <h3>Ana C.</h3>
+                            <span>Adotou o Bob</span>
+                        </div>
+                    </div>
+
+                    <p class="texto-depoimento">
+                        "Encontrei na adoção meu melhor amigo.
+                        Foi uma experiência maravilhosa do início ao fim!"
+                    </p>
+
+                </article>
+
+                 <article class="cartao-depoimento">
+
+                    <img class="foto-depoimento"
+                         src="/imgs/theo-wO9i41qr65g-unsplash (1).jpg"
+                         alt="Dona abraçando seu cachorro com carinho"
+                         loading="lazy">
+
+                   
+
+                    <div class="autor-depoimento">
+                        <div>
+                            <h3>Roberto </h3>
+                            <span>Adotou o Tata</span>
+                        </div>
+                    </div>
+
+                    <p class="texto-depoimento">
+                       "Adotar o Tata foi uma das melhores decisões da minha vida! Ele chegou trazendo muita alegria para nossa casa."
+                    </p>
+
+                </article>
+                 <article class="cartao-depoimento">
+
+                    <img class="foto-depoimento"
+                         src="/imgs/martin-baron-Sm1fk02CzOs-unsplash.jpg"
+                         alt="Dona abraçando seu cachorro com carinho"
+                         loading="lazy">
+
+                   
+
+                    <div class="autor-depoimento">
+                        <div>
+                            <h3>Manuel S.</h3>
+                            <span>Adotou o Chico</span>
+                        </div>
+                    </div>
+
+                    <p class="texto-depoimento">
+                       "Eu sempre quis ter um cachorro, mas não sabia por onde começar.Recomendo muito a adoção."
+                    </p>
+
+                </article>
+                 <article class="cartao-depoimento">
+
+                    <img class="foto-depoimento"
+                         src="/imgs/aj-iDbcGdaX7q0-unsplash.jpg"
+                         alt="Dona abraçando seu cachorro com carinho"
+                         loading="lazy">
+
+                   
+
+                    <div class="autor-depoimento">
+                        <div>
+                            <h3>Carlos H.</h3>
+                            <span>Adotou o Tobe </span>
+                        </div>
+                    </div>
+
+                    <p class="texto-depoimento">
+                      "A experiência de adoção foi incrível! Recebi todas as orientações necessárias e tive apoio em cada etapa.nha casa de amor. "
+                    </p>
+
+                </article>
+
+            </div>
+        </div>
+
+        <!-- BOTÃO PRÓXIMO -->
+        <button class="seta-depoimento proximo"
+                aria-label="Próximo depoimento">
+            &#10095;
+        </button>
+
+    </div>
+
+    <!-- INDICADORES -->
+    <div class="indicadores-depoimentos" aria-label="Navegação dos depoimentos">
+        <button class="indicador ativo" aria-label="Ir para depoimento 1"></button>
+        <button class="indicador" aria-label="Ir para depoimento 2"></button>
+        <button class="indicador" aria-label="Ir para depoimento 3"></button>
+    </div>
+
+</section>
+
+    <!-- =========================================================
+         6. HISTÓRIAS EM VÍDEO
+         Apresenta um vídeo incorporado e um resumo da história de adoção.
+         ========================================================= -->
+    <!-- Depoimento em vídeo: o iframe mantém proporção 16:9. -->
+    <section class="secao-container secao-historias" id="historias" aria-labelledby="titulo-historias">
+      <div class="historias-cabecalho">
+        <span class="identificador-secao">Uma adoção muda duas vidas</span>
+        <h2 id="titulo-historias">Histórias que aquecem o coração</h2>
+        <p>Conheça a história de Eduardo e Zulu: uma adoção que se transformou em 15 anos de amizade e companheirismo.</p>
+      </div>
+
+      <div class="historias-conteudo">
+        <div class="historias-video">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/73k-DoXMuy0"
+            title="História de adoção: Eduardo e Zulu — Adotar é Tudo de Bom"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+
+        <div class="historias-texto">
+          <span class="etiqueta-historia">História real de adoção</span>
+          <h3>De um resgate a uma amizade para a vida toda.</h3>
+          <p>Zulu foi adotado por Eduardo por meio de uma ONG. Quinze anos depois, a história dos dois mostra como a adoção responsável pode criar vínculos duradouros.</p>
+          <a class="botao botao-principal" href="https://www.youtube.com/watch?v=73k-DoXMuy0" target="_blank" rel="noopener noreferrer">Assistir no YouTube</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         7. CAMPANHA DE RESGATE
+         Orienta visitantes sobre como agir ao encontrar animais em risco.
+         ========================================================= -->
+    <!-- Campanha de conscientização e ajuda a animais em situação de risco. -->
+    <section class="secao-resgate" id="resgate" aria-labelledby="titulo-resgate">
+      <div class="resgate-container">
+        <div class="resgate-cabecalho">
+          <span class="identificador-secao">Ajude a salvar vidas</span>
+          <h2 id="titulo-resgate">Resgate animal: todo animal merece uma <span>segunda chance.</span></h2>
+          <p>Encontrou um animal abandonado, perdido ou em situação de risco? Sua atitude pode fazer toda a diferença. Ajude-nos a oferecer proteção, cuidado e um novo lar.</p>
+        </div>
+
+        <div class="resgate-banner">
+          <div class="resgate-conteudo">
+            <span>Um gesto pode mudar uma vida</span>
+            <h3>Não ignore um animal que precisa de ajuda!</h3>
+            <p>Se você encontrou um animal em risco, procure uma organização de proteção animal da sua região para receber orientação sobre cuidados, abrigo temporário e encaminhamento para adoção responsável.</p>
+            <div class="resgate-acoes">
+              <a class="botao botao-principal" href="PetLife_contato.html">Solicitar ajuda</a>
+              <a class="botao botao-claro" href="PetLife_contato.html">Oferecer lar temporário</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         8. LOCAIS DE ADOÇÃO E PROTEÇÃO ANIMAL
+         Exibe um mapa incorporado com uma busca por organizações
+         de proteção animal em Maceió e região.
+         ========================================================= -->
+    <!-- Mapa incorporado para ajudar a localizar organizações na região. -->
+    <section class="secao-locais" id="locais" aria-labelledby="titulo-locais">
+      <div class="secao-container">
+        <div class="cabecalho-secao">
+          <div>
+            <span class="identificador-secao">A adoção pode estar pertinho</span>
+            <h2 id="titulo-locais">Encontre um local de adoção</h2>
+            <p class="texto-locais">Consulte abrigos e organizações de proteção animal em Maceió e região.</p>
+          </div>
+        </div>
+
+        <div class="mapa-locais">
+          <iframe
+            title="Mapa de locais de proteção animal em Maceió"
+            src="https://maps.google.com/maps?q=abrigos%20e%20ONGs%20de%20prote%C3%A7%C3%A3o%20animal%20Macei%C3%B3%20AL&t=&z=11&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         9. NOTÍCIAS E CUIDADOS
+         Reúne conteúdos educativos em cards com imagem, título,
+         resumo e link para leitura.
+         ========================================================= -->
+    <!-- Conteúdo educativo: cards com imagens e links para leitura. -->
+  <section class="secao-container secao-noticias" id="noticias" aria-labelledby="titulo-noticias">
+      <div class="cabecalho-secao">
+        <div>
+          <span class="identificador-secao">Informação também salva vidas</span>
+          <h2 id="titulo-noticias">Notícias e cuidados</h2>
+        </div>
+        <a class="link-destaque" href="#contato">Ver todas as notícias</a>
+      </div>
+
+      <div class="grade-noticias">
+        <article class="cartao-noticia">
+          <img src="imgs/alin-luna-8LfPXM6abRk-unsplash.jpg" alt="Cachorro olhando para a câmera" loading="lazy">
+          <div>
+            <h3>Adotar um animal é valorizar a vida</h3>
+            <p>Entenda como a adoção responsável transforma histórias.</p>
+            <a href="#contato">Ler mais</a>
+          </div>
+        </article>
+
+        <article class="cartao-noticia">
+          <img src="imgs/ereng-hu-p29LeTa6OLM-unsplash.jpg" alt="Cães recebendo atenção de uma pessoa" loading="lazy">
+          <div>
+            <h3>Como ajudar além de adotar?</h3>
+            <p>Doações, voluntariado e divulgação fortalecem as ONGs.</p>
+            <a href="#contato">Ler mais</a>
+          </div>
+        </article>
+
+        <article class="cartao-noticia">
+          <img src="imgs/alexander-mass-e4f87NzUJsU-unsplash.jpg" alt="Cachorro durante atendimento veterinário" loading="lazy">
+          <div>
+            <h3>Primeiros cuidados com seu pet</h3>
+            <p>Alimentação, vacinação e carinho fazem a diferença.</p>
+            <a href="#contato">Ler mais</a>
+          </div>
+        </article>
+      </div>
+    </section>
+      <!-- =========================================================
+           10. PERGUNTAS FREQUENTES
+           Utiliza details e summary para expandir e recolher respostas
+           sem depender de JavaScript.
+           ========================================================= -->
+      <!-- Perguntas frequentes: os elementos details e summary permitem abrir e fechar respostas sem JavaScript. -->
+  <section class="secao-faq" id="perguntas-frequentes">
+    <div class="faq-conteudo">
+
+        <h2>Perguntas Frequentes</h2>
+
+        <div class="lista-perguntas">
+
+            <details class="item-pergunta">
+                <summary>Como funciona o processo de adoção?</summary>
+                <p>Você escolhe um animal, preenche o formulário de adoção e aguarda o contato da nossa equipe.</p>
+            </details>
+
+            <details class="item-pergunta">
+                <summary>Existe algum custo para adotar?</summary>
+                <p>Entre em contato com nossa equipe para conhecer as condições de adoção.</p>
+            </details>
+
+            <details class="item-pergunta">
+                <summary>Quais são os requisitos para adotar?</summary>
+                <p>É importante ter responsabilidade, tempo e condições para cuidar do animal.</p>
+            </details>
+
+            <details class="item-pergunta">
+                <summary>Posso adotar mais de um animal?</summary>
+                <p>Sim! Desde que você tenha condições de oferecer os cuidados necessários.</p>
+            </details>
+
+            <details class="item-pergunta">
+                <summary>Os animais são vacinados?</summary>
+                <p>As informações sobre vacinação e saúde são apresentadas durante o processo de adoção.</p>
+            </details>
+
+            <details class="item-pergunta">
+                <summary>Como posso ajudar a PetLife?</summary>
+                <p>Você pode ajudar divulgando nosso trabalho, realizando doações ou sendo voluntário.</p>
+            </details>
+
+        </div>
+    </div>
+
+    <div class="faq-imagem">
+        <img
+            src="/imgs/manuel-meza-KvKop_a_EXw-unsplash.jpg"
+            alt="mulher com cachorro"
+        >
+    </div>
+</section>
+
+    <!-- =========================================================
+         11. CHAMADA PARA CONTATO
+         Direciona o visitante para a página de contato da PetLife.
+         ========================================================= -->
+    <section class="faixa-contato">
+      <div><p class="identificador-secao">Ainda tem dúvidas?</p><h2>Entre em contato com a equipe PetLife.</h2></div>
+      <a class="botao botao-principal" href="/PetLife_contato.html">Ir para contato</a>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       12. RODAPÉ
+       Reúne a marca, descrição institucional, redes sociais,
+       links auxiliares e aviso de direitos autorais.
+       ========================================================= -->
+  <!-- Rodapé: informações institucionais, navegação auxiliar e redes sociais. -->
+  <footer class="rodape" id="contato">
+    <div class="rodape-marca">
+      <a class="marca marca-rodape" href="#inicio" aria-label="PetLife — voltar ao início">
+        <span class="marca-imagem"><img src="imgs/Group 1.png" alt="" width="90" height="70"></span>
+        <span class="marca-nome">Pet<span>Life</span></span>
+      </a>
+      <p>Conectando animais abandonados a pessoas que querem amar e cuidar.</p>
+
+      <div class="redes-sociais" aria-label="Redes sociais">
+        <a href="#" aria-label="Facebook"><img src="imgs/5D8s-GsHJlJ 1.png" alt=""></a>
+        <a href="#" aria-label="Twitter"><img src="imgs/i489929 1.png" alt=""></a>
+        <a href="#" aria-label="Instagram"><img src="imgs/Group.png" alt=""></a>
+      </div>
+    </div>
+
+    <div class="rodape-coluna">
+      <h2>Institucional</h2>
+      <a href="#inicio">Sobre a PetLife</a>
+      <a href="#resgate">Transparência</a>
+      <a href="#resgate">Projetos</a>
+    </div>
+
+    <div class="rodape-coluna">
+      <h2>Dúvidas</h2>
+      <a href="#adocao">Adoção de gato</a>
+      <a href="#adocao">Adoção de cachorro</a>
+      <a href="mailto:contato@petlife.org">Regras de adoção</a>
+    </div>
+
+    <div class="rodape-coluna">
+      <h2>Como ajudar?</h2>
+      <a href="#resgate">Doe e ajude nosso projeto</a>
+      <a href="#resgate">Denuncie maus-tratos</a>
+      <a href="#adocao">Quero adotar</a>
+    </div>
+
+    <small class="direitos-autorais">© 2026 PetLife. Todos os direitos reservados.</small>
+  </footer>
+<!-- Arquivo JavaScript responsável pelas interações da página. -->
+<script src="js/script.js"></script>
+
+ 
+</body>
+</html>

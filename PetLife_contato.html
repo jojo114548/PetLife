@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PetLife — encontre seu novo melhor amigo e transforme uma vida por meio da adoção responsável.">
+  <meta name="theme-color" content="#ff604f">
+  <title>PetLife | Adoção de Animais</title>
+
+  <!-- Carrega a fonte Nunito e antecipa a conexão com o Google Fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Folha de estilos principal do projeto. -->
+  <link rel="stylesheet" href="PetLife.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <!-- Cabeçalho principal: marca, navegação e botão de menu para telas menores. -->
+  <header class="cabecalho" id="inicio">
+    <a class="marca" href="/index.html" aria-label="PetLife — página inicial">
+      <span class="marca-imagem">
+        <img src="imgs/Group 1.png" alt="" width="90" height="70">
+      </span>
+      <span class="marca-nome">Pet<span>Life</span></span>
+    </a>
+
+    <button
+      class="botao-menu"
+      type="button"
+      aria-label="Abrir menu de navegação"
+      aria-controls="navegacao-principal"
+      aria-expanded="false">
+      <span aria-hidden="true">☰</span>
+    </button>
+
+    <nav class="navegacao" id="navegacao-principal" aria-label="Navegação principal">
+      <a href="/index.html#adocao">Animais</a>
+      <a href="/index.html#historias">Histórias</a>
+      <a href="/index.html#resgate">Resgate</a>
+      <a href="/index.html#locais">Locais</a>
+      <a href="/index.html#noticias">Notícias</a>
+      <div class="botao-grupo-navegacao">
+      <a class="botao-navegacao" href="/index.html#contato">Seja parceiro</a>
+      <a class="botao-navegacao botao-navegacao-destaque" href="/index.html#adocao">Quero adotar</a>
+      </div>
+     
+    </nav>
+  </header>
+
+  <main>
+   
+
+    <section class="secao secao-contato">
+
+      <div class="cartao-contato">
+    
+        <div class="texto-contato">
+          <p class="identificador-secao">Estamos aqui para ajudar</p>
+          <h1>Fale com a PetLife</h1>
+          <p>Envie uma dúvida, compartilhe uma sugestão ou converse com nossa equipe sobre o projeto.</p>
+         <img
+        src="/imgs/alvan-nee-ZCHj_2lJP00-unsplash.jpg"
+        alt="gatinho com pata estendida"
+       >
+        </div>
+
+        <form class="formulario-contato" id="formulario-contato" novalidate>
+          <div class="campo-formulario">
+            <!-- CAMPO ASSUNTO -->
+<div class="campo-formulario">
+    <label for="assunto">Assunto:</label>
+
+   <select id="assunto" name="assunto" required>
+    <option value="" disabled selected>Selecione um assunto</option>
+    <option value="duvida">Dúvida</option>
+    <option value="feedback">Feedback</option>
+    <option value="voluntario">Quero ser voluntário</option>
+    <option value="depoimento">Enviar depoimento</option>
+    <option value="adocao">Informações sobre adoção</option>
+    <option value="parceria">Parcerias</option>
+    <option value="outro">Outro assunto</option>
+</select>
+
+<small class="mensagem-erro" id="erro-assunto"></small>
+</div>
+            <label for="nome-completo">Nome completo <span aria-hidden="true">*</span></label>
+            <input type="text" id="nome-completo" name="nome" autocomplete="name" required minlength="3" aria-describedby="erro-nome">
+            <small class="mensagem-erro" id="erro-nome"></small>
+          </div>
+          <div class="campo-formulario">
+            <label for="email-contato">E-mail <span aria-hidden="true">*</span></label>
+            <input type="email" id="email-contato" name="email" autocomplete="email" required aria-describedby="erro-email">
+            <small class="mensagem-erro" id="erro-email"></small>
+          </div>
+          <div class="campo-formulario">
+            <label for="mensagem-contato">Mensagem <span aria-hidden="true">*</span></label>
+            <textarea id="mensagem-contato" name="mensagem" rows="6" required minlength="10" aria-describedby="erro-mensagem"></textarea>
+            <small class="mensagem-erro" id="erro-mensagem"></small>
+          </div>
+          <button class="botao botao-principal botao-enviar" type="submit">Enviar mensagem</button>
+          <p class="mensagem-retorno" id="mensagem-retorno" role="status" aria-live="polite"></p>
+          <p class="texto-obrigatorio">* Campos obrigatórios.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+ <!-- Rodapé: informações institucionais, navegação auxiliar e redes sociais. -->
+  <footer class="rodape" id="contato">
+    <div class="rodape-marca">
+      <a class="marca marca-rodape" href="#inicio" aria-label="PetLife — voltar ao início">
+        <span class="marca-imagem"><img src="imgs/Group 1.png" alt="" width="90" height="70"></span>
+        <span class="marca-nome">Pet<span>Life</span></span>
+      </a>
+      <p>Conectando animais abandonados a pessoas que querem amar e cuidar.</p>
+
+      <div class="redes-sociais" aria-label="Redes sociais">
+        <a href="#" aria-label="Facebook"><img src="imgs/5D8s-GsHJlJ 1.png" alt=""></a>
+        <a href="#" aria-label="Twitter"><img src="imgs/i489929 1.png" alt=""></a>
+        <a href="#" aria-label="Instagram"><img src="imgs/Group.png" alt=""></a>
+      </div>
+    </div>
+
+    <div class="rodape-coluna">
+      <h2>Institucional</h2>
+      <a href="#inicio">Sobre a PetLife</a>
+      <a href="#resgate">Transparência</a>
+      <a href="#resgate">Projetos</a>
+    </div>
+
+    <div class="rodape-coluna">
+      <h2>Dúvidas</h2>
+      <a href="#adocao">Adoção de gato</a>
+      <a href="#adocao">Adoção de cachorro</a>
+      <a href="mailto:contato@petlife.org">Regras de adoção</a>
+    </div>
+
+    <div class="rodape-coluna">
+      <h2>Como ajudar?</h2>
+      <a href="#resgate">Doe e ajude nosso projeto</a>
+      <a href="#resgate">Denuncie maus-tratos</a>
+      <a href="#adocao">Quero adotar</a>
+    </div>
+
+    <small class="direitos-autorais">© 2026 PetLife. Todos os direitos reservados.</small>
+  </footer>
+<script src="js/script.js"></script>
+
+ 
+</body>
+</html>
