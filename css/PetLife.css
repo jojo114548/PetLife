@@ -56,14 +56,13 @@
 
 /* Cartão principal que agrupa as informações e o formulário. */
 .cartao-contato {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 45px;
     width: 100%;
     padding: 20px;
     border-radius: 20px;
-    background-color: #fffaf6;
+    background-color: #ffffff;
     box-shadow: 0 10px 30px rgba(69, 58, 54, 0.12);
 }
 
@@ -152,7 +151,7 @@
     min-width: 0;
     padding: 30px;
     border-radius: 16px;
-    background-color: #ffffff;
+   background-color: #fdf2e9;
     box-shadow: 0 6px 20px rgba(69, 58, 54, 0.08);
 }
 
