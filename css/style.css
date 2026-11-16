@@ -1,7 +1,5 @@
 /* ============================================================
    PETLIFE — FOLHA DE ESTILOS PRINCIPAL
-   Organizada e revisada. Regras repetidas com valores diferentes
-   foram mantidas quando funcionam como sobrescritas da cascata.
    ============================================================ */
 
 /*
@@ -1926,63 +1924,131 @@ color: #e94f43;
 
 /* 9. Página Conteúdo: artigo, listas e cartões de orientação. */
 
-.secao-artigo { padding-block: 65px; }
+.secao-artigo { 
+  padding-block: 65px; }
 
-.bloco-conteudo { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 42px; }
+.bloco-conteudo {
+   display: grid; 
+   grid-template-columns: 1.1fr .9fr;
+   align-items: center; 
+   gap: 42px; }
 
-.texto-artigo h2 { margin: 5px 0 14px; font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.15; }
+.texto-artigo h2 { 
+  margin: 5px 0 14px; 
+  font-size: clamp(1.8rem, 3vw, 2.4rem); 
+  line-height: 1.15; }
 
-.texto-artigo p { color: var(--texto-suave); }
+.texto-artigo p {
+   color: var(--texto-suave); }
 
-.texto-artigo h3 { margin-top: 22px; }
+.texto-artigo h3 { 
+  margin-top: 22px; }
 
-.lista-cuidados { padding-left: 22px; color: var(--texto-suave); }
+.lista-cuidados {
+   padding-left: 22px; 
+   color: var(--texto-suave); }
 
-.lista-cuidados li { margin-block: 8px; }
+.lista-cuidados li {
+   margin-block: 8px; }
 
-.imagem-artigo { width: 100%; min-height: 310px; max-height: 390px; border-radius: var(--raio); object-fit: cover; }
+.imagem-artigo { 
+   width: 100%;
+   min-height: 310px;
+   max-height: 390px;
+   border-radius: var(--raio);
+   object-fit: cover; }
 
-.secao-cuidados, .secao-video, .secao-mapa { padding-block: 45px 70px; }
+.secao-cuidados, .secao-video, .secao-mapa { 
+  padding-block: 45px 70px; }
 
-.grade-cuidados { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.grade-cuidados { 
+  display: grid;
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px; }
 
-.cartao-cuidado { padding: 25px; border: 1px solid var(--borda); border-radius: var(--raio); background: white; box-shadow: var(--sombra); }
+.cartao-cuidado { 
+  padding: 25px; 
+  border: 1px solid var(--borda); 
+  border-radius: var(--raio); 
+  background: white; 
+  box-shadow: var(--sombra); }
 
-.cartao-cuidado > span { font-size: 2rem; }
+.cartao-cuidado > span { 
+  font-size: 2rem; }
 
-.cartao-cuidado h3 { margin: 10px 0 5px; }
+.cartao-cuidado h3 { 
+  margin: 10px 0 5px; }
 
-.cartao-cuidado p { margin: 0; color: var(--texto-suave); }
+.cartao-cuidado p {
+   margin: 0; color: var(--texto-suave); }
 
-.moldura-video, .moldura-mapa { overflow: hidden; border-radius: var(--raio); background: #e6d8d0; box-shadow: var(--sombra); }
+.moldura-video, .moldura-mapa { 
+  overflow: hidden; 
+  border-radius: var(--raio); 
+  background: #e6d8d0; 
+  box-shadow: var(--sombra); }
 
-.moldura-video { width: min(850px, 100%); margin-inline: auto; aspect-ratio: 16 / 9; }
+.moldura-video { 
+  width: min(850px, 100%); 
+  margin-inline: auto; 
+  aspect-ratio: 16 / 9; }
 
-.moldura-video iframe, .moldura-mapa iframe { display: block; width: 100%; height: 100%; border: 0; }
+.moldura-video iframe, .moldura-mapa iframe { 
+  display: block; 
+  width: 100%; 
+  height: 100%; 
+  border: 0; }
 
-.observacao { color: var(--texto-suave); font-size: .88rem; text-align: center; }
+.observacao { 
+  color: var(--texto-suave);
+   font-size: .88rem; 
+   text-align: center; }
 
-.moldura-mapa { height: 420px; }
+.moldura-mapa { 
+  height: 420px; }
 
-.cabecalho-secao > p:not(.identificador-secao) { color: var(--texto-suave); }
+.cabecalho-secao > p:not(.identificador-secao) { 
+  color: var(--texto-suave); }
 
 /* 8. Página Contato: formulário e mensagens de validação. */
 
-.secao-contato { padding-block: 65px 85px; }
+.secao-contato { 
+  padding-block: 65px 85px; }
 
-.cartao-contato { display: grid; grid-template-columns: .85fr 1.15fr; gap: 45px; padding: clamp(22px, 4vw, 48px); border-radius: 22px; background: white; box-shadow: var(--sombra); }
+.cartao-contato {
+   display: grid; 
+   grid-template-columns: .85fr 1.15fr; 
+   gap: 45px; 
+   padding: clamp(22px, 4vw, 48px); 
+   border-radius: 22px; 
+   background: white; 
+   box-shadow: var(--sombra); }
 
-.texto-contato > p:not(.identificador-secao) { color: var(--texto-suave); }
+.texto-contato > p:not(.identificador-secao) { 
+  color: var(--texto-suave); }
 
-.aviso-privacidade { margin-top: 22px; padding: 15px; border-left: 4px solid var(--laranja); border-radius: 8px; background: var(--pessego); color: var(--texto-suave); font-size: .9rem; }
+.aviso-privacidade { 
+  margin-top: 22px;
+   padding: 15px; 
+   border-left: 4px solid var(--laranja); 
+   border-radius: 8px; 
+   background: var(--pessego); 
+   color: var(--texto-suave);
+    font-size: .9rem; }
 
-.formulario-contato { display: grid; gap: 17px; }
+.formulario-contato {
+   display: grid; 
+   gap: 17px; }
 
-.campo-formulario { display: grid; gap: 7px; }
+.campo-formulario { 
+  display: grid; 
+  gap: 7px; }
 
-.campo-formulario label { font-weight: 800; }
+.campo-formulario label { 
+  font-weight: 800; }
 
-.campo-formulario label span { color: var(--coral-escuro); }
+.campo-formulario label span { 
+  color: var(--coral-escuro); }
 
 .campo-formulario input, .campo-formulario textarea {
 
@@ -2002,37 +2068,79 @@ color: #e94f43;
 
 }
 
-.campo-formulario textarea { min-height: 145px; resize: vertical; }
+.campo-formulario textarea { 
+  min-height: 145px; 
+  resize: vertical; }
 
-.campo-formulario input[aria-invalid="true"], .campo-formulario textarea[aria-invalid="true"] { border: 2px solid #b42318; }
+.campo-formulario input[aria-invalid="true"], .campo-formulario textarea[aria-invalid="true"] { 
+  border: 2px solid #b42318; }
 
-.mensagem-erro { min-height: 1.2em; color: #b42318; font-size: .85rem; }
+.mensagem-erro { 
+  min-height: 1.2em; 
+  color: #b42318; 
+  font-size: .85rem; }
 
-.botao-enviar { justify-self: start; min-width: 180px; }
+.botao-enviar { 
+  justify-self: start;
+   min-width: 180px; }
 
-.mensagem-retorno { min-height: 1.5em; margin: 0; font-weight: 800; }
+.mensagem-retorno { 
+  min-height: 1.5em; 
+  margin: 0; 
+  font-weight: 800; }
 
-.mensagem-retorno.sucesso { color: #176b39; }
+.mensagem-retorno.sucesso { 
+  color: #176b39; }
 
-.mensagem-retorno.erro { color: #b42318; }
+.mensagem-retorno.erro { 
+  color: #b42318; }
 
-.texto-obrigatorio { margin: 0; color: var(--texto-suave); font-size: .82rem; }
+.texto-obrigatorio { 
+  margin: 0; 
+  color: var(--texto-suave); 
+  font-size: .82rem; }
 
 /* 9. Rodapé compartilhado. */
 
-.rodape { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 20px 30px; padding: 30px max(6%, 24px) 18px; background: var(--coral); color: white; }
+.rodape { 
+  display: grid; 
+  grid-template-columns: auto 1fr auto; 
+  align-items: center; 
+  gap: 20px 30px; 
+  padding: 30px max(6%, 24px) 18px; 
+  background: var(--coral); 
+  color: white; }
 
-.marca-rodape .marca-nome span { color: #ffe0bd; }
+.marca-rodape .marca-nome span { 
+  color: #ffe0bd; }
 
-.rodape > p { margin: 0; font-size: .9rem; }
+.rodape > p {
+   margin: 0; font-size: .9rem; }
 
-.links-rodape { display: flex; flex-wrap: wrap; gap: 18px; font-weight: 800; }
+.links-rodape { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 18px; 
+  font-weight: 800; }
 
-.links-rodape a:hover { text-decoration: underline; }
+.links-rodape a:hover { 
+  text-decoration: underline; }
 
-.rodape small { grid-column: 1 / -1; padding-top: 15px; border-top: 1px solid rgb(255 255 255 / 30%); text-align: center; }
+.rodape small { 
+  grid-column: 1 / -1; 
+  padding-top: 15px; 
+  border-top: 1px solid rgb(255 255 255 / 30%); 
+  text-align: center; }
 
-.faixa-contato { display: flex;gap: 20px;height: 12rem; align-items: center; flex-direction: column;margin-top: 6rem; padding: 20px; border-radius: 22px;  }
+.faixa-contato { 
+  display: flex;
+  gap: 20px;
+  height: 12rem; 
+  align-items: center; 
+  flex-direction: column;
+  margin-top: 6rem; 
+  padding: 20px;
+   border-radius: 22px;  }
 
 /* 10. Tablet: navegação recolhida e grades com menos colunas. */
 
@@ -2044,31 +2152,47 @@ color: #e94f43;
 
   .navegacao {
 
-    position: absolute; top: 100%; right: 0; left: 0;
+    position: absolute; 
+    top: 100%;
+     right: 0; 
+     left: 0;
 
-    display: none; align-items: stretch; flex-direction: column;
+    display: none; 
+    align-items: stretch; 
+    flex-direction: column;
 
-    gap: 14px; padding: 22px 6%; background: var(--coral-escuro);
+    gap: 14px; 
+    padding: 22px 6%; 
+    background: var(--coral-escuro);
 
   }
 
-  .navegacao.menu-aberto { display: flex; }
+  .navegacao.menu-aberto { 
+    display: flex; }
 
-  .navegacao .botao { justify-content: center; }
+  .navegacao .botao { 
+    justify-content: center; }
 
-  .secao-apresentacao, .bloco-conteudo { gap: 28px; }
+  .secao-apresentacao, .bloco-conteudo {
+     gap: 28px; }
 
-  .secao-guia-adocao, .secao-duvidas { gap: 35px; }
+  .secao-guia-adocao, .secao-duvidas {
+     gap: 35px; }
 
-  .imagem-guia-adocao { height: 370px; }
+  .imagem-guia-adocao {
+     height: 370px; }
 
-  .cartao-contato { grid-template-columns: 1fr; gap: 25px; }
+  .cartao-contato { 
+    grid-template-columns: 1fr; gap: 25px; }
 
-  .rodape { grid-template-columns: 1fr 1fr; }
+  .rodape {
+     grid-template-columns: 1fr 1fr; }
 
-  .rodape > p { grid-column: 1 / -1; }
+  .rodape > p { 
+    grid-column: 1 / -1; }
 
-  .links-rodape { grid-column: 1 / -1; }
+  .links-rodape {
+     grid-column: 1 / -1; }
 
 }
 
@@ -2076,59 +2200,98 @@ color: #e94f43;
 
 @media (max-width: 620px) {
 
-  html { scroll-padding-top: 75px; }
+  html { 
+    scroll-padding-top: 75px; }
 
-  .cabecalho { padding-inline: 5%; }
+  .cabecalho { 
+    padding-inline: 5%; }
 
-  .marca-nome { font-size: 1.35rem; }
+  .marca-nome { 
+    font-size: 1.35rem; }
 
-  .destaque-inicial { min-height: 440px; padding: 55px 7%; background-position: 62% center; }
+  .destaque-inicial { 
+    min-height: 440px; 
+    padding: 55px 7%; 
+    background-position: 62% center; }
 
-  .destaque-conteudo h1 { font-size: clamp(2.4rem, 11vw, 3.5rem); }
+  .destaque-conteudo h1 {
+     font-size: clamp(2.4rem, 11vw, 3.5rem); }
 
-  .grupo-botoes { align-items: stretch; flex-direction: column; }
+  .grupo-botoes { 
+    align-items: stretch;
+     flex-direction: column; }
 
-  .grupo-botoes .botao { width: 100%; }
+  .grupo-botoes .botao { 
+    width: 100%; }
 
-  .secao { width: 88%; }
+  .secao { 
+    width: 88%; }
 
-  .secao-apresentacao, .bloco-conteudo { grid-template-columns: 1fr; padding-block: 52px; }
+  .secao-apresentacao, .bloco-conteudo { 
+    grid-template-columns: 1fr; 
+    padding-block: 52px; }
 
-  .secao-guia-adocao, .secao-duvidas { grid-template-columns: 1fr; gap: 28px; padding-block: 55px; }
+  .secao-guia-adocao, .secao-duvidas {
+     grid-template-columns: 1fr; 
+     gap: 28px; 
+     padding-block: 55px; }
 
-  .conteudo-guia-adocao h2 { max-width: 360px; font-size: clamp(2.5rem, 11vw, 3.5rem); }
+  .conteudo-guia-adocao h2 { 
+    max-width: 360px; 
+    font-size: clamp(2.5rem, 11vw, 3.5rem); }
 
-  .imagem-guia-adocao { height: 350px; border-radius: 100px 100px 16px 16px; }
+  .imagem-guia-adocao {
+     height: 350px; 
+     border-radius: 100px 100px 16px 16px; }
 
-  .item-duvida summary { min-height: 66px; }
+  .item-duvida summary {
+     min-height: 66px; }
 
-  .imagem-apresentacao { height: 250px; }
+  .imagem-apresentacao { 
+    height: 250px; }
 
-  .grade-animais, .grade-cuidados { grid-template-columns: 1fr; }
+  .grade-animais, .grade-cuidados {
+     grid-template-columns: 1fr; }
 
-  .cartao-animal { display: grid; grid-template-columns: 42% 1fr; align-items: center; }
+  .cartao-animal { 
+    display: grid; 
+    grid-template-columns: 42% 1fr; 
+    align-items: center; }
 
-  .cartao-animal img { height: 145px; }
+  .cartao-animal img {
+     height: 145px; }
 
-  .faixa-contato { align-items: flex-start; flex-direction: column; }
+  .faixa-contato { 
+    align-items: flex-start; 
+    flex-direction: column; }
 
-  .cabecalho-pagina { padding-block: 48px; }
+  .cabecalho-pagina {
+     padding-block: 48px; }
 
-  .secao-artigo, .secao-contato { padding-block: 45px 55px; }
+  .secao-artigo, .secao-contato { 
+    padding-block: 45px 55px; }
 
-  .imagem-artigo { min-height: 230px; }
+  .imagem-artigo { 
+    min-height: 230px; }
 
-  .imagem-guia-adocao { height: 300px; border-radius: 82px 82px 14px 14px; }
+  .imagem-guia-adocao { 
+    height: 300px;
+     border-radius: 82px 82px 14px 14px; }
 
-  .secao-duvidas { padding-block: 48px 58px; }
+  .secao-duvidas { 
+    padding-block: 48px 58px; }
 
-  .moldura-mapa { height: 330px; }
+  .moldura-mapa {
+     height: 330px; }
 
-  .rodape { grid-template-columns: 1fr; }
+  .rodape {
+     grid-template-columns: 1fr; }
 
-  .rodape > p, .links-rodape, .rodape small { grid-column: auto; }
+  .rodape > p, .links-rodape, .rodape small { 
+    grid-column: auto; }
 
-  .links-rodape { gap: 15px; }
+  .links-rodape { 
+    gap: 15px; }
 
 }
 
@@ -2136,13 +2299,17 @@ color: #e94f43;
 
 @media (max-width: 380px) {
 
-  .cartao-animal { grid-template-columns: 1fr; }
+  .cartao-animal { 
+    grid-template-columns: 1fr; }
 
-  .cartao-animal img { height: 205px; }
+  .cartao-animal img { 
+    height: 205px; }
 
-  .botao { width: 100%; }
+  .botao { 
+    width: 100%; }
 
-  .moldura-mapa { height: 290px; }
+  .moldura-mapa {
+     height: 290px; }
 
 }
 
@@ -2546,15 +2713,8 @@ color: #e94f43;
 
 }
 
-/* =====================================================
 
-   AJUSTES VISUAIS FINAIS - PETLIFE
-
-   Adicione este trecho no FINAL do style.css
-
-\===================================================== */
-
-/* 1. CABEÇALHO E MENU */
+/*  CABEÇALHO E MENU */
 
 /* Organiza os links e mantém o menu com fundo próprio */
 
@@ -2612,7 +2772,7 @@ color: #e94f43;
 
 }
 
-/* 2. BOTÕES SEJA PARCEIRO E QUERO ADOTAR */
+/*  BOTÕES SEJA PARCEIRO E QUERO ADOTAR */
 
 /* Mantém os dois botões separados dos links do menu */
 
@@ -2772,7 +2932,7 @@ color: #e94f43;
 
 }
 
-/* 4. PERGUNTAS FREQUENTES */
+/*  PERGUNTAS FREQUENTES */
 
 /* Centraliza a seção na página */
 
@@ -3054,7 +3214,7 @@ color: #e94f43;
 
 }
 
-/* 7. RODAPÉ DA PÁGINA INICIAL */
+/* RODAPÉ DA PÁGINA INICIAL */
 
 /* Organiza as quatro colunas do rodapé */
 
@@ -3288,7 +3448,7 @@ color: #e94f43;
 
 }
 
-/* 10. RESPONSIVIDADE PARA CELULARES */
+/*  RESPONSIVIDADE PARA CELULARES */
 
 @media (max-width: 620px) {
 
@@ -3630,7 +3790,8 @@ color: #e94f43;
 
     justify-content: space-between;
 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, 
+    box-shadow 0.3s ease;
 
 }
 

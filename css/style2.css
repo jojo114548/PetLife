@@ -1,7 +1,6 @@
 
 /* =========================================================
    PETLIFE — PÁGINA DE ADOÇÃO
-   Estilos dos detalhes do animal, formulário e responsividade.
    ========================================================= */
 
 
@@ -136,7 +135,7 @@
     font-weight: 800;
 }
 
-/* Nota ou observação importante sobre o animal. */
+/*  observação importante sobre o animal. */
 .nota-pet {
     margin: 20px 0;
     padding: 14px;
@@ -273,7 +272,8 @@
     color: #453a36;
     font-family: 'Nunito', sans-serif;
     font-size: 14px;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    transition: border-color 0.25s ease, 
+    box-shadow 0.25s ease;
 }
 
 /* Altura e redimensionamento do campo de mensagem. */
